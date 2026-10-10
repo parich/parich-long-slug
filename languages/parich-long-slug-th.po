@@ -1,0 +1,1133 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Parich Long Slug 0.1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/parich-long-slug\n"
+"Last-Translator: Parich Suriya\n"
+"Language-Team: Thai\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-10-10T05:39:40+00:00\n"
+"PO-Revision-Date: 2026-10-10 05:39+0000\n"
+"Language: th\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: parich-long-slug\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. Plugin Name of the plugin
+#: parich-long-slug.php
+#: includes/class-parich-slug-admin.php:87
+#: includes/class-parich-slug-admin.php:334
+msgid "Parich Long Slug"
+msgstr "Parich Long Slug"
+
+#. Plugin URI of the plugin
+#: parich-long-slug.php
+msgid "https://github.com/parich/parich-long-slug"
+msgstr "https://github.com/parich/parich-long-slug"
+
+#. Description of the plugin
+#: parich-long-slug.php
+msgid "Long, Thai-friendly post and term slugs that survive WordPress updates, with a repair tool for slugs damaged by Long URL Maker."
+msgstr "slug ของเรื่องและหมวดหมู่ที่ยาวได้และรองรับภาษาไทย ไม่ถูกตัดเมื่ออัปเดต WordPress พร้อมเครื่องมือกู้คืน slug ที่ Long URL Maker ทำเสียหาย"
+
+#. Author of the plugin
+#: parich-long-slug.php
+msgid "Mr.Parich Suriya"
+msgstr "Mr.Parich Suriya"
+
+#. Author URI of the plugin
+#: parich-long-slug.php
+msgid "https://github.com/parich"
+msgstr "https://github.com/parich"
+
+#: includes/class-parich-slug-admin.php:67
+msgid "The longest slug must be a number. The previous value was kept."
+msgstr "ความยาวสูงสุดของ slug ต้องเป็นตัวเลข จึงคงค่าเดิมไว้"
+
+#. translators: 1: saved value, 2: lowest allowed, 3: highest allowed
+#: includes/class-parich-slug-admin.php:77
+#, php-format
+msgid "The longest slug was set to %1$d: it must be between %2$d and %3$d."
+msgstr "ตั้งความยาวสูงสุดของ slug เป็น %1$d เพราะต้องอยู่ระหว่าง %2$d ถึง %3$d"
+
+#: includes/class-parich-slug-admin.php:88
+msgid "Long Slug"
+msgstr "Long Slug"
+
+#: includes/class-parich-slug-admin.php:98
+#: includes/class-parich-slug-admin.php:329
+msgid "Settings"
+msgstr "ตั้งค่า"
+
+#: includes/class-parich-slug-admin.php:109
+#: includes/class-parich-slug-admin.php:419
+msgid "Donate"
+msgstr "บริจาค"
+
+#: includes/class-parich-slug-admin.php:125
+msgid "The preview could not be loaded."
+msgstr "โหลดตัวอย่างไม่ได้"
+
+#. translators: 1: length in bytes, 2: longest allowed
+#: includes/class-parich-slug-admin.php:152
+#, php-format
+msgid "%1$d of %2$d bytes"
+msgstr "%1$d จาก %2$d ไบต์"
+
+#: includes/class-parich-slug-admin.php:154
+msgid "cut to fit"
+msgstr "ตัดให้พอดี"
+
+#: includes/class-parich-slug-admin.php:194
+msgid "Slug columns"
+msgstr "คอลัมน์ slug"
+
+#: includes/class-parich-slug-admin.php:197
+msgid "Long slugs are off until both columns are varchar(2000). Use \"Set up again\" below."
+msgstr "slug ยาวยังใช้ไม่ได้จนกว่าทั้งสองคอลัมน์จะเป็น varchar(2000) ใช้ปุ่ม \"ตั้งค่าใหม่อีกครั้ง\" ด้านล่าง"
+
+#: includes/class-parich-slug-admin.php:205
+msgid "Character set"
+msgstr "ชุดอักขระ"
+
+#: includes/class-parich-slug-admin.php:208
+msgid "Not UTF-8. Slugs still work because they are stored percent-encoded (plain ASCII), but titles in Thai may not be stored correctly elsewhere."
+msgstr "ไม่ใช่ UTF-8: slug ยังใช้ได้เพราะเก็บแบบเข้ารหัส URL (ASCII ล้วน) แต่ชื่อเรื่องภาษาไทยในส่วนอื่นอาจเก็บไม่ถูกต้อง"
+
+#: includes/class-parich-slug-admin.php:215
+msgid "Missing"
+msgstr "ไม่มี"
+
+#: includes/class-parich-slug-admin.php:215
+msgid "Without it, a WordPress update can cut slugs longer than 200 characters (they are restored from the shadow copy afterwards). Use \"Set up again\" below."
+msgstr "ถ้าไม่มีไฟล์นี้ การอัปเดต WordPress อาจตัด slug ที่ยาวเกิน 200 ตัวอักษร (ปลั๊กอินจะคืนค่าจากสำเนาสำรองภายหลัง) ใช้ปุ่ม \"ตั้งค่าใหม่อีกครั้ง\" ด้านล่าง"
+
+#. translators: 1: installed version, 2: bundled version
+#: includes/class-parich-slug-admin.php:218
+#, php-format
+msgid "Version %1$s (current: %2$s)"
+msgstr "เวอร์ชัน %1$s (ปัจจุบัน: %2$s)"
+
+#. translators: 1: installed version, 2: bundled version
+#: includes/class-parich-slug-admin.php:218
+msgid "It is updated the next time an administrator opens wp-admin."
+msgstr "จะอัปเดตเมื่อผู้ดูแลเปิด wp-admin ครั้งถัดไป"
+
+#. translators: %s: version
+#: includes/class-parich-slug-admin.php:221
+#, php-format
+msgid "Installed, version %s"
+msgstr "ติดตั้งแล้ว เวอร์ชัน %s"
+
+#: includes/class-parich-slug-admin.php:223
+msgid "Guard (must-use plugin)"
+msgstr "ไฟล์ป้องกัน (must-use plugin)"
+
+#: includes/class-parich-slug-admin.php:232
+msgid "Shadow copy of long slugs"
+msgstr "สำเนาสำรองของ slug ยาว"
+
+#. translators: %d: number of slugs
+#: includes/class-parich-slug-admin.php:234
+#, php-format
+msgid "%d slug longer than 200 characters"
+msgid_plural "%d slugs longer than 200 characters"
+msgstr[0] "slug ที่ยาวเกิน 200 ตัวอักษร %d รายการ"
+
+#. translators: %d: number of slugs
+#: includes/class-parich-slug-admin.php:234
+msgid "Table missing"
+msgstr "ไม่มีตาราง"
+
+#: includes/class-parich-slug-admin.php:236
+msgid "Use \"Set up again\" below."
+msgstr "ใช้ปุ่ม \"ตั้งค่าใหม่อีกครั้ง\" ด้านล่าง"
+
+#. translators: 1: date, 2: restored slugs, 3: slugs left alone
+#: includes/class-parich-slug-admin.php:243
+#, php-format
+msgid "%1$s — restored %2$d, left alone %3$d"
+msgstr "%1$s — คืนค่า %2$d รายการ ไม่แตะ %3$d รายการ"
+
+#: includes/class-parich-slug-admin.php:248
+#: includes/class-parich-slug-admin.php:250
+msgid "Last repair after a WordPress update"
+msgstr "การซ่อมครั้งล่าสุดหลังอัปเดต WordPress"
+
+#: includes/class-parich-slug-admin.php:248
+msgid "The guard was missing during that update."
+msgstr "ตอนอัปเดตครั้งนั้นไม่มีไฟล์ป้องกัน"
+
+#: includes/class-parich-slug-admin.php:250
+msgid "Never needed"
+msgstr "ยังไม่เคยต้องซ่อม"
+
+#. translators: %s: 2,048
+#: includes/class-parich-slug-admin.php:257
+#, php-format
+msgid "Links longer than %s characters"
+msgstr "ลิงก์ที่ยาวเกิน %s ตัวอักษร"
+
+#: includes/class-parich-slug-admin.php:260
+msgid "None"
+msgstr "ไม่มี"
+
+#: includes/class-parich-slug-admin.php:262
+msgid "Some browsers, crawlers and sitemap readers refuse links this long. Shorten these slugs or their parent pages."
+msgstr "เบราว์เซอร์ โปรแกรมเก็บข้อมูลเว็บ และตัวอ่าน sitemap บางตัวไม่รับลิงก์ที่ยาวขนาดนี้ ควรย่อ slug เหล่านี้หรือของหน้าแม่"
+
+#: includes/class-parich-slug-admin.php:267
+#: includes/class-parich-slug-admin.php:287
+#: includes/class-parich-slug-admin.php:289
+msgid "Long URL Maker"
+msgstr "Long URL Maker"
+
+#: includes/class-parich-slug-admin.php:267
+msgid "Active"
+msgstr "เปิดใช้งานอยู่"
+
+#: includes/class-parich-slug-admin.php:267
+msgid "Deactivate it with the button in the notice above, not the usual Deactivate link."
+msgstr "ปิดใช้งานด้วยปุ่มในประกาศด้านบน ไม่ใช่ลิงก์ปิดใช้งานแบบปกติ"
+
+#. translators: %d: rows
+#: includes/class-parich-slug-admin.php:272
+#, php-format
+msgid "its backup table has %d row"
+msgid_plural "its backup table has %d rows"
+msgstr[0] "ตารางสำรองของปลั๊กอินนี้มี %d แถว"
+
+#: includes/class-parich-slug-admin.php:275
+msgid "its settings are still stored"
+msgstr "ค่าตั้งของปลั๊กอินนี้ยังเก็บอยู่"
+
+#: includes/class-parich-slug-admin.php:277
+msgid "It was used on this site, so some slugs may have been cut or rewritten by it."
+msgstr "เคยใช้งานบนเว็บนี้ จึงอาจมี slug ที่ถูกตัดหรือถูกเขียนใหม่"
+
+#: includes/class-parich-slug-admin.php:285
+#: includes/repair/class-parich-slug-repair-admin.php:560
+msgid "Scan for damaged slugs"
+msgstr "สแกนหา slug ที่เสียหาย"
+
+#: includes/class-parich-slug-admin.php:287
+msgid "Installed, inactive"
+msgstr "ติดตั้งอยู่ ปิดใช้งาน"
+
+#: includes/class-parich-slug-admin.php:287
+msgid "Removed"
+msgstr "ถอนออกแล้ว"
+
+#: includes/class-parich-slug-admin.php:289
+msgid "Installed, never used"
+msgstr "ติดตั้งอยู่ ไม่เคยใช้งาน"
+
+#: includes/class-parich-slug-admin.php:289
+msgid "Not installed"
+msgstr "ไม่ได้ติดตั้ง"
+
+#: includes/class-parich-slug-admin.php:324
+msgid "Sorry, you are not allowed to manage Parich Long Slug."
+msgstr "ขออภัย คุณไม่มีสิทธิ์จัดการ Parich Long Slug"
+
+#: includes/class-parich-slug-admin.php:330
+msgid "Repair slugs"
+msgstr "กู้คืน slug"
+
+#: includes/class-parich-slug-admin.php:335
+msgid "Secondary menu"
+msgstr "เมนูรอง"
+
+#: includes/class-parich-slug-admin.php:354
+msgid "Longest new slug"
+msgstr "ความยาวสูงสุดของ slug ใหม่"
+
+#: includes/class-parich-slug-admin.php:357
+msgid "bytes"
+msgstr "ไบต์"
+
+#. translators: 1: lowest, 2: highest, 3: Thai characters at the current value
+#: includes/class-parich-slug-admin.php:362
+#, php-format
+msgid "Between %1$d and %2$d, counted after percent-encoding: a Thai character takes 9 bytes and an English letter or digit 1, so the current value fits about %3$d Thai characters. WordPress alone stops at 200. Only new and edited slugs follow this setting; existing slugs are not changed."
+msgstr "ระหว่าง %1$d ถึง %2$d นับหลังเข้ารหัส URL: ตัวอักษรไทย 1 ตัวใช้ 9 ไบต์ ตัวอักษรอังกฤษหรือตัวเลขใช้ 1 ไบต์ ค่าปัจจุบันจึงได้ภาษาไทยประมาณ %3$d ตัว (WordPress ปกติหยุดที่ 200) ค่านี้ใช้กับ slug ใหม่และที่แก้ไขเท่านั้น slug เดิมไม่เปลี่ยน"
+
+#: includes/class-parich-slug-admin.php:372
+msgid "Try a title"
+msgstr "ลองพิมพ์ชื่อเรื่อง"
+
+#: includes/class-parich-slug-admin.php:385
+msgid "Status"
+msgstr "สถานะ"
+
+#: includes/class-parich-slug-admin.php:408
+msgid "Set up again"
+msgstr "ตั้งค่าใหม่อีกครั้ง"
+
+#: includes/class-parich-slug-admin.php:409
+msgid "Widens the slug columns, installs the guard and creates the shadow table if any of them is missing. Safe to repeat."
+msgstr "ขยายคอลัมน์ slug ติดตั้งไฟล์ป้องกัน และสร้างตารางสำเนาสำรองถ้ายังขาดอยู่ กดซ้ำได้อย่างปลอดภัย"
+
+#: includes/class-parich-slug-admin.php:417
+msgid "Support this plugin"
+msgstr "สนับสนุนปลั๊กอินนี้"
+
+#: includes/class-parich-slug-admin.php:418
+msgid "Parich Long Slug is free, with every feature for everyone. If it is useful to you, you can support its development:"
+msgstr "Parich Long Slug ใช้งานได้ฟรี ทุกคนได้ทุกความสามารถ ถ้ามีประโยชน์กับคุณ สามารถสนับสนุนการพัฒนาได้ที่นี่:"
+
+#: includes/class-parich-slug-admin.php:420
+msgid "Secure payment by Stripe."
+msgstr "ชำระเงินอย่างปลอดภัยผ่าน Stripe"
+
+#: includes/class-parich-slug-guard.php:73
+msgid "WordPress cannot write files directly on this server."
+msgstr "WordPress เขียนไฟล์บนเซิร์ฟเวอร์นี้โดยตรงไม่ได้"
+
+#: includes/class-parich-slug-guard.php:77
+msgid "The guard template is missing."
+msgstr "ไม่พบแม่แบบของไฟล์ป้องกัน"
+
+#: includes/class-parich-slug-guard.php:80
+msgid "The folder could not be created."
+msgstr "สร้างโฟลเดอร์ไม่ได้"
+
+#: includes/class-parich-slug-guard.php:84
+#: includes/class-parich-slug-guard.php:88
+msgid "The file could not be written."
+msgstr "เขียนไฟล์ไม่ได้"
+
+#: includes/class-parich-slug-guard.php:105
+msgid "The file could not be deleted."
+msgstr "ลบไฟล์ไม่ได้"
+
+#. translators: 1: reason, 2: file path
+#: includes/class-parich-slug-guard.php:131
+#, php-format
+msgid "The guard file could not be installed at %2$s: %1$s Without it, a WordPress update can shorten slugs longer than 200 characters."
+msgstr "ติดตั้งไฟล์ป้องกันที่ %2$s ไม่ได้: %1$s ถ้าไม่มีไฟล์นี้ การอัปเดต WordPress อาจตัด slug ที่ยาวเกิน 200 ตัวอักษร"
+
+#: includes/class-parich-slug-legacy.php:164
+msgid "Sorry, you are not allowed to deactivate this plugin."
+msgstr "ขออภัย คุณไม่มีสิทธิ์ปิดใช้งานปลั๊กอินนี้"
+
+#: includes/class-parich-slug-legacy.php:197
+msgid "Long URL Maker was deactivated without running its deactivation routine. Your slugs were not changed."
+msgstr "ปิดใช้งาน Long URL Maker แล้วโดยไม่ให้ขั้นตอนปิดใช้งานของมันทำงาน slug ของคุณไม่ถูกเปลี่ยน"
+
+#: includes/class-parich-slug-legacy.php:202
+msgid "Long URL Maker was switched off again right after activation, before its activation routine could write old slugs over the current ones. Keep it inactive while Parich Long Slug is active."
+msgstr "Long URL Maker ถูกปิดอีกครั้งทันทีหลังเปิดใช้งาน ก่อนที่ขั้นตอนเปิดใช้งานของมันจะเขียน slug เก่าทับของปัจจุบัน กรุณาปิดไว้ขณะที่ Parich Long Slug เปิดอยู่"
+
+#: includes/class-parich-slug-legacy.php:213
+msgid "Long URL Maker is active."
+msgstr "Long URL Maker เปิดใช้งานอยู่"
+
+#: includes/class-parich-slug-legacy.php:214
+msgid "When it is deactivated it rebuilds every slug from the post title and shortens the slug columns, which changes your URLs. Parich Long Slug has switched those actions off while both plugins are active. Turn Long URL Maker off with this button:"
+msgstr "เมื่อถูกปิดใช้งาน มันจะสร้าง slug ใหม่ทั้งหมดจากชื่อเรื่องและหดคอลัมน์ slug ทำให้ URL ของคุณเปลี่ยน Parich Long Slug ปิดการทำงานเหล่านั้นไว้ขณะที่ทั้งสองปลั๊กอินเปิดอยู่ ปิด Long URL Maker ด้วยปุ่มนี้:"
+
+#: includes/class-parich-slug-legacy.php:219
+msgid "Deactivate Long URL Maker safely"
+msgstr "ปิด Long URL Maker อย่างปลอดภัย"
+
+#: includes/class-parich-slug-schema.php:326
+msgid "Parich Long Slug could not finish its setup."
+msgstr "Parich Long Slug ตั้งค่าไม่สำเร็จ"
+
+#: includes/class-parich-slug-schema.php:332
+msgid "Try again"
+msgstr "ลองอีกครั้ง"
+
+#: includes/class-parich-slug-schema.php:353
+msgid "A WordPress database update shortened the slug columns."
+msgstr "การอัปเดตฐานข้อมูล WordPress หดคอลัมน์ slug"
+
+#. translators: %d: number of slugs
+#: includes/class-parich-slug-schema.php:357
+#, php-format
+msgid "Parich Long Slug widened them again and restored %d slug that had been cut to 200 characters."
+msgid_plural "Parich Long Slug widened them again and restored %d slugs that had been cut to 200 characters."
+msgstr[0] "Parich Long Slug ขยายคอลัมน์กลับแล้ว และคืนค่า slug ที่ถูกตัดเหลือ 200 ตัวอักษร %d รายการ"
+
+#. translators: 1: number of slugs, 2: list such as "post:12, term:5"
+#: includes/class-parich-slug-schema.php:364
+#, php-format
+msgid "%1$d slug was left as it is because it changed after being cut: %2$s."
+msgid_plural "%1$d slugs were left as they are because they changed after being cut: %2$s."
+msgstr[0] "ไม่แตะ slug %1$d รายการ เพราะถูกเปลี่ยนหลังจากถูกตัด: %2$s"
+
+#: includes/class-parich-slug-schema.php:377
+msgid "Dismiss"
+msgstr "ปิดข้อความนี้"
+
+#: includes/class-parich-slug-schema.php:391
+msgid "Sorry, you are not allowed to dismiss this notice."
+msgstr "ขออภัย คุณไม่มีสิทธิ์ปิดข้อความนี้"
+
+#: includes/class-parich-slug-schema.php:409
+msgid "Sorry, you are not allowed to change the database for this plugin."
+msgstr "ขออภัย คุณไม่มีสิทธิ์แก้ไขฐานข้อมูลสำหรับปลั๊กอินนี้"
+
+#. translators: %d: number of redirects
+#: includes/repair/class-parich-slug-repair-admin.php:64
+#, php-format
+msgid "Parich Long Slug redirects %d old address to a repaired post or term. Redirects stop when the plugin is deactivated, and are deleted with it."
+msgid_plural "Parich Long Slug redirects %d old addresses to repaired posts and terms. Redirects stop when the plugin is deactivated, and are deleted with it."
+msgstr[0] "Parich Long Slug เปลี่ยนเส้นทางที่อยู่เดิม %d รายการไปยังเรื่องหรือหมวดหมู่ที่กู้คืนแล้ว การเปลี่ยนเส้นทางจะหยุดเมื่อปิดใช้งานปลั๊กอิน และถูกลบไปพร้อมปลั๊กอิน"
+
+#: includes/repair/class-parich-slug-repair-admin.php:68
+msgid "Download them first to keep them in another redirect plugin."
+msgstr "ดาวน์โหลดไว้ก่อนเพื่อนำไปใช้กับปลั๊กอินเปลี่ยนเส้นทางตัวอื่น"
+
+#: includes/repair/class-parich-slug-repair-admin.php:89
+msgid "Starting the scan…"
+msgstr "กำลังเริ่มสแกน…"
+
+#. translators: 1: step name, 2: objects checked so far
+#: includes/repair/class-parich-slug-repair-admin.php:91
+#, php-format
+msgid "Scanning: %1$s — %2$d posts and terms checked"
+msgstr "กำลังสแกน: %1$s — ตรวจเรื่องและหมวดหมู่แล้ว %2$d รายการ"
+
+#: includes/repair/class-parich-slug-repair-admin.php:92
+msgid "Scan finished. Loading the results…"
+msgstr "สแกนเสร็จแล้ว กำลังโหลดผล…"
+
+#: includes/repair/class-parich-slug-repair-admin.php:93
+msgid "The scan stopped with an error. Try again; the scan restarts from the beginning."
+msgstr "การสแกนหยุดเพราะเกิดข้อผิดพลาด ลองอีกครั้ง การสแกนจะเริ่มใหม่ตั้งแต่ต้น"
+
+#. translators: 1: items done, 2: items in all
+#: includes/repair/class-parich-slug-repair-admin.php:98
+#, php-format
+msgid "Repairing: %1$d of %2$d…"
+msgstr "กำลังกู้คืน: %1$d จาก %2$d…"
+
+#: includes/repair/class-parich-slug-repair-admin.php:99
+msgid "Change the slugs of the selected items? A redirect is made from every old address. You can undo the whole batch later."
+msgstr "เปลี่ยน slug ของรายการที่เลือกหรือไม่ ที่อยู่เดิมทุกรายการจะถูกเปลี่ยนเส้นทางไปที่ใหม่ และย้อนกลับทั้งชุดได้ภายหลัง"
+
+#: includes/repair/class-parich-slug-repair-admin.php:100
+msgid "Change the slugs of every item marked \"Ready\"? A redirect is made from every old address. You can undo the whole batch later."
+msgstr "เปลี่ยน slug ของทุกรายการที่ \"พร้อม\" หรือไม่ ที่อยู่เดิมทุกรายการจะถูกเปลี่ยนเส้นทางไปที่ใหม่ และย้อนกลับทั้งชุดได้ภายหลัง"
+
+#: includes/repair/class-parich-slug-repair-admin.php:101
+msgid "Select at least one item."
+msgstr "เลือกอย่างน้อย 1 รายการ"
+
+#: includes/repair/class-parich-slug-repair-admin.php:102
+msgid "The repair stopped:"
+msgstr "การกู้คืนหยุด:"
+
+#: includes/repair/class-parich-slug-repair-admin.php:134
+msgid "Another repair was started meanwhile."
+msgstr "มีการเริ่มกู้คืนชุดอื่นในระหว่างนี้"
+
+#. translators: 1: batch number, 2: items repaired, 3: items skipped, 4: redirects made
+#: includes/repair/class-parich-slug-repair-admin.php:159
+#, php-format
+msgid "Repair %1$d: %2$d slugs repaired, %3$d skipped, %4$d redirects made."
+msgstr "การกู้คืนชุดที่ %1$d: กู้ slug %2$d รายการ ข้าม %3$d รายการ สร้างการเปลี่ยนเส้นทาง %4$d รายการ"
+
+#: includes/repair/class-parich-slug-repair-admin.php:160
+msgid "Clear any page cache and let your SEO or sitemap plugin rebuild its sitemap."
+msgstr "ล้างแคชของหน้าเว็บ และให้ปลั๊กอิน SEO หรือ sitemap สร้าง sitemap ใหม่"
+
+#: includes/repair/class-parich-slug-repair-admin.php:163
+msgid "Yoast SEO: run \"Optimize SEO data\" (Yoast SEO → Tools) so it reads the repaired addresses."
+msgstr "Yoast SEO: สั่ง \"Optimize SEO data\" (Yoast SEO → Tools) เพื่อให้อ่านที่อยู่ที่กู้คืนแล้ว"
+
+#. translators: %d: number of links
+#: includes/repair/class-parich-slug-repair-admin.php:168
+#, php-format
+msgid "%d link on your site still points at an old address; the redirects cover it, but you may want to update it."
+msgid_plural "%d links on your site still point at old addresses; the redirects cover them, but you may want to update them."
+msgstr[0] "ลิงก์บนเว็บของคุณ %d ลิงก์ยังชี้ไปที่อยู่เดิม การเปลี่ยนเส้นทางรองรับแล้ว แต่อาจแก้ลิงก์ให้ตรงด้วย"
+
+#: includes/repair/class-parich-slug-repair-admin.php:185
+msgid "That repair does not exist."
+msgstr "ไม่มีการกู้คืนชุดนั้น"
+
+#. translators: 1: batch number, 2: slugs put back, 3: slugs left (changed since), 4: items still to undo
+#: includes/repair/class-parich-slug-repair-admin.php:198
+#, php-format
+msgid "Undo of repair %1$d: %2$d slugs put back, %3$d left as they were changed since, %4$d still to undo."
+msgstr "ย้อนกลับการกู้คืนชุดที่ %1$d: คืน slug เดิม %2$d รายการ คงไว้ %3$d รายการเพราะถูกเปลี่ยนหลังจากนั้น เหลือต้องย้อนกลับอีก %4$d รายการ"
+
+#: includes/repair/class-parich-slug-repair-admin.php:202
+msgid "Click Undo again to go on."
+msgstr "กด \"ย้อนกลับ\" อีกครั้งเพื่อทำต่อ"
+
+#. translators: 1: old address, 2: post title
+#: includes/repair/class-parich-slug-repair-admin.php:250
+#, php-format
+msgid "%1$s now redirects to \"%2$s\"."
+msgstr "%1$s เปลี่ยนเส้นทางไปที่ \"%2$s\" แล้ว"
+
+#: includes/repair/class-parich-slug-repair-admin.php:269
+msgid "Give the ID or the link of a published post or page."
+msgstr "ระบุ ID หรือลิงก์ของเรื่องหรือหน้าเว็บที่เผยแพร่แล้ว"
+
+#: includes/repair/class-parich-slug-repair-admin.php:273
+msgid "That address cannot be redirected."
+msgstr "ที่อยู่นี้เปลี่ยนเส้นทางไม่ได้"
+
+#: includes/repair/class-parich-slug-repair-admin.php:276
+msgid "That address already redirects somewhere else. Turn that redirect off first."
+msgstr "ที่อยู่นี้เปลี่ยนเส้นทางไปที่อื่นอยู่แล้ว ปิดการเปลี่ยนเส้นทางนั้นก่อน"
+
+#: includes/repair/class-parich-slug-repair-admin.php:285
+msgid "collecting URLs from logs, redirects and links"
+msgstr "รวบรวม URL จากบันทึก การเปลี่ยนเส้นทาง และลิงก์"
+
+#: includes/repair/class-parich-slug-repair-admin.php:286
+msgid "checking posts"
+msgstr "ตรวจเรื่อง"
+
+#: includes/repair/class-parich-slug-repair-admin.php:287
+msgid "checking categories and tags"
+msgstr "ตรวจหมวดหมู่และป้ายกำกับ"
+
+#: includes/repair/class-parich-slug-repair-admin.php:288
+msgid "looking for shared slugs"
+msgstr "ค้นหา slug ที่ซ้ำกัน"
+
+#: includes/repair/class-parich-slug-repair-admin.php:289
+msgid "weighing the evidence"
+msgstr "ชั่งน้ำหนักหลักฐาน"
+
+#: includes/repair/class-parich-slug-repair-admin.php:290
+msgid "settling slugs wanted twice"
+msgstr "จัดการ slug ที่มีหลายรายการต้องการ"
+
+#: includes/repair/class-parich-slug-repair-admin.php:291
+msgid "checking proposals against existing slugs"
+msgstr "เทียบค่าที่เสนอกับ slug ที่มีอยู่"
+
+#: includes/repair/class-parich-slug-repair-admin.php:292
+msgid "ordering parents before children"
+msgstr "เรียงลำดับแม่ก่อนลูก"
+
+#: includes/repair/class-parich-slug-repair-admin.php:293
+msgid "done"
+msgstr "เสร็จแล้ว"
+
+#: includes/repair/class-parich-slug-repair-admin.php:313
+msgid "Another scan was started meanwhile."
+msgstr "มีการเริ่มสแกนครั้งอื่นในระหว่างนี้"
+
+#: includes/repair/class-parich-slug-repair-admin.php:334
+msgid "Sorry, you are not allowed to use the repair tool."
+msgstr "ขออภัย คุณไม่มีสิทธิ์ใช้เครื่องมือกู้คืน"
+
+#: includes/repair/class-parich-slug-repair-admin.php:355
+msgid "Only .txt and .csv files can be imported."
+msgstr "นำเข้าได้เฉพาะไฟล์ .txt และ .csv"
+
+#: includes/repair/class-parich-slug-repair-admin.php:357
+msgid "No file was uploaded."
+msgstr "ไม่มีไฟล์ที่อัปโหลด"
+
+#. translators: 1: lines imported, 2: lines skipped
+#: includes/repair/class-parich-slug-repair-admin.php:368
+#, php-format
+msgid "Imported %1$d lines, skipped %2$d. Scan again to use them."
+msgstr "นำเข้า %1$d บรรทัด ข้าม %2$d บรรทัด สแกนอีกครั้งเพื่อใช้ข้อมูลนี้"
+
+#: includes/repair/class-parich-slug-repair-admin.php:381
+msgid "Imported URLs and CSV rows were removed."
+msgstr "ลบ URL และแถว CSV ที่นำเข้าแล้ว"
+
+#: includes/repair/class-parich-slug-repair-admin.php:395
+msgid "There are no scan results to export yet."
+msgstr "ยังไม่มีผลสแกนให้ส่งออก"
+
+#: includes/repair/class-parich-slug-repair-admin.php:432
+msgid "Long URL Maker backup"
+msgstr "ตารางสำรองของ Long URL Maker"
+
+#: includes/repair/class-parich-slug-repair-admin.php:433
+msgid "Slug before trashing"
+msgstr "slug ก่อนย้ายไปถังขยะ"
+
+#: includes/repair/class-parich-slug-repair-admin.php:434
+msgid "SEO plugin data"
+msgstr "ข้อมูลของปลั๊กอิน SEO"
+
+#: includes/repair/class-parich-slug-repair-admin.php:435
+msgid "404 log"
+msgstr "บันทึก 404"
+
+#: includes/repair/class-parich-slug-repair-admin.php:436
+msgid "Existing redirect"
+msgstr "การเปลี่ยนเส้นทางที่มีอยู่"
+
+#: includes/repair/class-parich-slug-repair-admin.php:437
+msgid "Link on the site"
+msgstr "ลิงก์บนเว็บ"
+
+#: includes/repair/class-parich-slug-repair-admin.php:438
+msgid "Made from the title"
+msgstr "สร้างจากชื่อเรื่อง"
+
+#: includes/repair/class-parich-slug-repair-admin.php:439
+msgid "Imported CSV"
+msgstr "CSV ที่นำเข้า"
+
+#: includes/repair/class-parich-slug-repair-admin.php:440
+msgid "Imported URL"
+msgstr "URL ที่นำเข้า"
+
+#: includes/repair/class-parich-slug-repair-admin.php:441
+msgid "GUID"
+msgstr "GUID"
+
+#: includes/repair/class-parich-slug-repair-admin.php:442
+msgid "ACF: saved values"
+msgstr "ACF: ค่าที่บันทึกไว้"
+
+#: includes/repair/class-parich-slug-repair-admin.php:443
+msgid "ACF: options page"
+msgstr "ACF: หน้าตัวเลือก"
+
+#: includes/repair/class-parich-slug-repair-admin.php:444
+msgid "ACF: acf-json file"
+msgstr "ACF: ไฟล์ acf-json"
+
+#: includes/repair/class-parich-slug-repair-admin.php:445
+msgid "Theme it belongs to"
+msgstr "ธีมที่เป็นเจ้าของ"
+
+#: includes/repair/class-parich-slug-repair-admin.php:446
+msgid "Template with this title"
+msgstr "แม่แบบที่มีชื่อนี้"
+
+#: includes/repair/class-parich-slug-repair-admin.php:454
+msgid "Cut at 200 characters"
+msgstr "ถูกตัดที่ 200 ตัวอักษร"
+
+#: includes/repair/class-parich-slug-repair-admin.php:455
+msgid "Rewritten from the title"
+msgstr "ถูกเขียนใหม่จากชื่อเรื่อง"
+
+#: includes/repair/class-parich-slug-repair-admin.php:456
+msgid "Put back to an older slug"
+msgstr "ถูกย้อนเป็น slug เก่า"
+
+#: includes/repair/class-parich-slug-repair-admin.php:457
+msgid "Same slug as another item"
+msgstr "slug ซ้ำกับรายการอื่น"
+
+#: includes/repair/class-parich-slug-repair-admin.php:458
+msgid "Cut to fit \"-2\" when made"
+msgstr "ถูกตัดตอนสร้างเพื่อให้ใส่ \"-2\" ได้"
+
+#: includes/repair/class-parich-slug-repair-admin.php:459
+msgid "System key (ACF field, template, styles…)"
+msgstr "คีย์ของระบบ (ฟิลด์ ACF, แม่แบบ, สไตล์…)"
+
+#: includes/repair/class-parich-slug-repair-admin.php:460
+msgid "Category or tag"
+msgstr "หมวดหมู่หรือป้ายกำกับ"
+
+#: includes/repair/class-parich-slug-repair-admin.php:467
+msgid "Long URL Maker put back an older slug: both were in use, so choose one."
+msgstr "Long URL Maker ย้อน slug กลับเป็นค่าเก่า ทั้งสองค่าเคยใช้งานจริง จึงต้องเลือกเอง"
+
+#: includes/repair/class-parich-slug-repair-admin.php:468
+msgid "Another item keeps the same slug."
+msgstr "มีรายการอื่นใช้ slug เดียวกันอยู่"
+
+#: includes/repair/class-parich-slug-repair-admin.php:469
+msgid "Cut when it was made: this URL never changed. Lengthening it is optional."
+msgstr "ถูกตัดตั้งแต่ตอนสร้าง URL นี้ไม่เคยเปลี่ยน จะทำให้ยาวขึ้นหรือไม่ก็ได้"
+
+#: includes/repair/class-parich-slug-repair-admin.php:470
+msgid "Strong sources disagree."
+msgstr "แหล่งหลักฐานที่น่าเชื่อถือให้ค่าไม่ตรงกัน"
+
+#: includes/repair/class-parich-slug-repair-admin.php:471
+msgid "A strong source says the current slug is right."
+msgstr "แหล่งหลักฐานที่น่าเชื่อถือบอกว่า slug ปัจจุบันถูกต้อง"
+
+#: includes/repair/class-parich-slug-repair-admin.php:472
+msgid "Only one source that can be wrong."
+msgstr "มีหลักฐานแหล่งเดียวและอาจผิดได้"
+
+#: includes/repair/class-parich-slug-repair-admin.php:473
+msgid "Drafts get their slug when published."
+msgstr "ฉบับร่างจะได้ slug ตอนเผยแพร่"
+
+#: includes/repair/class-parich-slug-repair-admin.php:474
+msgid "The slug was changed after Long URL Maker's backup was made."
+msgstr "slug ถูกเปลี่ยนหลังจาก Long URL Maker สำรองไว้"
+
+#: includes/repair/class-parich-slug-repair-admin.php:475
+msgid "Only the backup says so, and WordPress keeps no history of page slugs."
+msgstr "มีแค่ตารางสำรองที่บอกค่านี้ และ WordPress ไม่เก็บประวัติ slug ของหน้าเว็บ"
+
+#: includes/repair/class-parich-slug-repair-admin.php:476
+msgid "Another item would get the same slug."
+msgstr "รายการอื่นจะได้ slug เดียวกัน"
+
+#: includes/repair/class-parich-slug-repair-admin.php:477
+msgid "Another item already uses this slug."
+msgstr "มีรายการอื่นใช้ slug นี้อยู่แล้ว"
+
+#: includes/repair/class-parich-slug-repair-admin.php:478
+msgid "WordPress or a plugin finds this item by this key: check that it is the right one."
+msgstr "WordPress หรือปลั๊กอินค้นหารายการนี้ด้วยคีย์นี้ ตรวจให้แน่ใจว่าถูกต้อง"
+
+#: includes/repair/class-parich-slug-repair-admin.php:479
+msgid "Several global styles belong to this theme: they are numbered in the order they were made."
+msgstr "ธีมนี้มีสไตล์ส่วนกลางหลายรายการ จึงใส่หมายเลขตามลำดับที่สร้าง"
+
+#: includes/repair/class-parich-slug-repair-admin.php:480
+msgid "A cache WordPress rebuilds by itself: nothing to repair."
+msgstr "เป็นแคชที่ WordPress สร้างใหม่เอง ไม่ต้องกู้คืน"
+
+#: includes/repair/class-parich-slug-repair-admin.php:488
+msgid "Ready"
+msgstr "พร้อม"
+
+#: includes/repair/class-parich-slug-repair-admin.php:489
+msgid "Check"
+msgstr "ตรวจสอบ"
+
+#: includes/repair/class-parich-slug-repair-admin.php:490
+msgid "Unknown"
+msgstr "ไม่ทราบ"
+
+#: includes/repair/class-parich-slug-repair-admin.php:503
+msgid "Slug columns hold 2,000 characters"
+msgstr "คอลัมน์ slug เก็บได้ 2,000 ตัวอักษร"
+
+#: includes/repair/class-parich-slug-repair-admin.php:505
+#: includes/repair/class-parich-slug-repair-admin.php:515
+msgid "Use \"Set up again\" on the Settings tab."
+msgstr "ใช้ปุ่ม \"ตั้งค่าใหม่อีกครั้ง\" ในแท็บตั้งค่า"
+
+#: includes/repair/class-parich-slug-repair-admin.php:508
+msgid "Long URL Maker is not active"
+msgstr "Long URL Maker ไม่ได้เปิดใช้งาน"
+
+#: includes/repair/class-parich-slug-repair-admin.php:510
+msgid "Deactivate it with the button in the notice at the top of the page."
+msgstr "ปิดใช้งานด้วยปุ่มในประกาศที่ด้านบนของหน้า"
+
+#: includes/repair/class-parich-slug-repair-admin.php:513
+msgid "The guard is installed"
+msgstr "ติดตั้งไฟล์ป้องกันแล้ว"
+
+#: includes/repair/class-parich-slug-repair-admin.php:538
+msgid "Finds slugs that Long URL Maker cut, rewrote from the title or put back to an older value, and proposes the original slug with the evidence for it. Scanning only reads your site; nothing is changed."
+msgstr "ค้นหา slug ที่ Long URL Maker ตัด เขียนใหม่จากชื่อเรื่อง หรือย้อนเป็นค่าเก่า แล้วเสนอ slug เดิมพร้อมหลักฐาน การสแกนอ่านข้อมูลอย่างเดียว ไม่เปลี่ยนอะไรบนเว็บ"
+
+#: includes/repair/class-parich-slug-repair-admin.php:540
+msgid "Before repairing"
+msgstr "ก่อนกู้คืน"
+
+#: includes/repair/class-parich-slug-repair-admin.php:545
+msgid "Done:"
+msgstr "เรียบร้อย:"
+
+#: includes/repair/class-parich-slug-repair-admin.php:545
+msgid "Not yet:"
+msgstr "ยังไม่เรียบร้อย:"
+
+#: includes/repair/class-parich-slug-repair-admin.php:554
+msgid "Back up the database before applying any repair."
+msgstr "สำรองฐานข้อมูลก่อนกู้คืน"
+
+#: includes/repair/class-parich-slug-repair-admin.php:558
+msgid "Scan"
+msgstr "สแกน"
+
+#: includes/repair/class-parich-slug-repair-admin.php:560
+msgid "Scan again"
+msgstr "สแกนอีกครั้ง"
+
+#: includes/repair/class-parich-slug-repair-admin.php:565
+msgid "A scan did not finish. Start it again to see results."
+msgstr "การสแกนยังไม่เสร็จ เริ่มสแกนใหม่เพื่อดูผล"
+
+#: includes/repair/class-parich-slug-repair-admin.php:582
+msgid "Repairs made"
+msgstr "การกู้คืนที่ทำแล้ว"
+
+#: includes/repair/class-parich-slug-repair-admin.php:584
+#: includes/repair/class-parich-slug-repair-admin.php:623
+msgid "Repair"
+msgstr "การกู้คืน"
+
+#: includes/repair/class-parich-slug-repair-admin.php:584
+msgid "When"
+msgstr "เมื่อ"
+
+#: includes/repair/class-parich-slug-repair-admin.php:584
+msgid "By"
+msgstr "โดย"
+
+#: includes/repair/class-parich-slug-repair-admin.php:584
+msgid "Slugs"
+msgstr "slug"
+
+#: includes/repair/class-parich-slug-repair-admin.php:584
+#: includes/repair/class-parich-slug-repair-admin.php:633
+msgid "Actions"
+msgstr "การกระทำ"
+
+#. translators: 1: repaired, 2: undone, 3: left as they were changed since
+#: includes/repair/class-parich-slug-repair-admin.php:595
+#, php-format
+msgid "%1$d repaired, %2$d undone, %3$d kept"
+msgstr "กู้คืน %1$d ย้อนกลับ %2$d คงไว้ %3$d"
+
+#: includes/repair/class-parich-slug-repair-admin.php:604
+msgid "Undo"
+msgstr "ย้อนกลับ"
+
+#. translators: %d: batch number
+#: includes/repair/class-parich-slug-repair-admin.php:604
+#, php-format
+msgid "Undo repair %d"
+msgstr "ย้อนกลับการกู้คืนชุดที่ %d"
+
+#: includes/repair/class-parich-slug-repair-admin.php:623
+msgid "Matched by hand"
+msgstr "จับคู่ด้วยตนเอง"
+
+#: includes/repair/class-parich-slug-repair-admin.php:625
+msgid "Redirects"
+msgstr "การเปลี่ยนเส้นทาง"
+
+#: includes/repair/class-parich-slug-repair-admin.php:626
+msgid "Old addresses that now lead to the repaired post or term (301). They work only while Parich Long Slug is active: before removing it, download them and add them to a redirect plugin."
+msgstr "ที่อยู่เดิมที่ตอนนี้พาไปยังเรื่องหรือหมวดหมู่ที่กู้คืนแล้ว (301) ใช้ได้เฉพาะขณะที่ Parich Long Slug เปิดอยู่ ก่อนถอนปลั๊กอิน ให้ดาวน์โหลดแล้วนำไปใส่ในปลั๊กอินเปลี่ยนเส้นทาง"
+
+#: includes/repair/class-parich-slug-repair-admin.php:630
+msgid "Download the redirects (CSV)"
+msgstr "ดาวน์โหลดการเปลี่ยนเส้นทาง (CSV)"
+
+#: includes/repair/class-parich-slug-repair-admin.php:633
+msgid "Old address"
+msgstr "ที่อยู่เดิม"
+
+#: includes/repair/class-parich-slug-repair-admin.php:633
+msgid "Goes to"
+msgstr "ไปที่"
+
+#: includes/repair/class-parich-slug-repair-admin.php:633
+msgid "Made by"
+msgstr "สร้างโดย"
+
+#: includes/repair/class-parich-slug-repair-admin.php:633
+msgid "Used"
+msgstr "ใช้งาน"
+
+#: includes/repair/class-parich-slug-repair-admin.php:638
+msgid "(off)"
+msgstr "(ปิด)"
+
+#: includes/repair/class-parich-slug-repair-admin.php:639
+msgid "Not published any more: the old address shows \"not found\"."
+msgstr "ไม่ได้เผยแพร่แล้ว ที่อยู่เดิมจะแสดง \"ไม่พบหน้า\""
+
+#: includes/repair/class-parich-slug-repair-admin.php:649
+msgid "Turn off"
+msgstr "ปิด"
+
+#: includes/repair/class-parich-slug-repair-admin.php:649
+msgid "Turn on"
+msgstr "เปิด"
+
+#: includes/repair/class-parich-slug-repair-admin.php:649
+msgid "Delete"
+msgstr "ลบ"
+
+#. translators: 1: date and time, 2: posts and terms checked, 3: items listed
+#: includes/repair/class-parich-slug-repair-admin.php:677
+#, php-format
+msgid "Last scan %1$s: %2$d posts and terms checked, %3$d need a look."
+msgstr "สแกนล่าสุด %1$s: ตรวจเรื่องและหมวดหมู่ %2$d รายการ ต้องตรวจดู %3$d รายการ"
+
+#. translators: %s: table name
+#: includes/repair/class-parich-slug-repair-admin.php:685
+#, php-format
+msgid "The table %s does not have the columns this version knows; it was skipped."
+msgstr "ตาราง %s ไม่มีคอลัมน์ที่เวอร์ชันนี้รู้จัก จึงข้ามไป"
+
+#: includes/repair/class-parich-slug-repair-admin.php:688
+msgid "All"
+msgstr "ทั้งหมด"
+
+#: includes/repair/class-parich-slug-repair-admin.php:711
+msgid "Kind of damage"
+msgstr "ประเภทความเสียหาย"
+
+#: includes/repair/class-parich-slug-repair-admin.php:713
+msgid "All kinds of damage"
+msgstr "ความเสียหายทุกประเภท"
+
+#: includes/repair/class-parich-slug-repair-admin.php:718
+msgid "Filter"
+msgstr "กรอง"
+
+#: includes/repair/class-parich-slug-repair-admin.php:727
+msgid "Repair the selected items"
+msgstr "กู้คืนรายการที่เลือก"
+
+#. translators: %d: number of items marked Ready
+#: includes/repair/class-parich-slug-repair-admin.php:731
+#, php-format
+msgid "Repair the %d item marked \"Ready\""
+msgid_plural "Repair all %d items marked \"Ready\""
+msgstr[0] "กู้คืนทุกรายการที่ \"พร้อม\" (%d รายการ)"
+
+#: includes/repair/class-parich-slug-repair-admin.php:739
+msgid "A repair did not finish (the page was closed or the server stopped it). You can start it again after five minutes; items it already repaired are skipped, and it can be undone below."
+msgstr "การกู้คืนยังไม่เสร็จ (ปิดหน้าไปหรือเซิร์ฟเวอร์หยุดทำงาน) เริ่มใหม่ได้หลังจาก 5 นาที รายการที่กู้ไปแล้วจะถูกข้าม และย้อนกลับได้จากด้านล่าง"
+
+#: includes/repair/class-parich-slug-repair-admin.php:757
+msgid "Download the results (CSV)"
+msgstr "ดาวน์โหลดผลสแกน (CSV)"
+
+#: includes/repair/class-parich-slug-repair-admin.php:771
+msgid "Select"
+msgstr "เลือก"
+
+#: includes/repair/class-parich-slug-repair-admin.php:772
+msgid "Item"
+msgstr "รายการ"
+
+#: includes/repair/class-parich-slug-repair-admin.php:773
+msgid "Now"
+msgstr "ปัจจุบัน"
+
+#: includes/repair/class-parich-slug-repair-admin.php:774
+msgid "Proposed"
+msgstr "ค่าที่เสนอ"
+
+#: includes/repair/class-parich-slug-repair-admin.php:775
+msgid "Evidence"
+msgstr "หลักฐาน"
+
+#: includes/repair/class-parich-slug-repair-admin.php:780
+msgid "Nothing in this list."
+msgstr "ไม่มีรายการ"
+
+#: includes/repair/class-parich-slug-repair-admin.php:791
+msgid "Repair this item"
+msgstr "กู้คืนรายการนี้"
+
+#: includes/repair/class-parich-slug-repair-admin.php:794
+msgid "(no title)"
+msgstr "(ไม่มีชื่อ)"
+
+#. translators: %d: number of other links
+#: includes/repair/class-parich-slug-repair-admin.php:811
+#, php-format
+msgid "%d more link changes with it (children, posts in it)."
+msgid_plural "%d more links change with it (children, posts in it)."
+msgstr[0] "มีลิงก์อีก %d ลิงก์ที่เปลี่ยนตาม (หน้าลูก เรื่องในหมวดหมู่)"
+
+#: includes/repair/class-parich-slug-repair-admin.php:816
+msgid "(empty)"
+msgstr "(ว่าง)"
+
+#. translators: %d: bytes
+#: includes/repair/class-parich-slug-repair-admin.php:816
+#: includes/repair/class-parich-slug-repair-admin.php:819
+#, php-format
+msgid "%d bytes"
+msgstr "%d ไบต์"
+
+#: includes/repair/class-parich-slug-repair-admin.php:822
+msgid "Or type a slug:"
+msgstr "หรือพิมพ์ slug เอง:"
+
+#: includes/repair/class-parich-slug-repair-admin.php:828
+msgid "No evidence of what the slug was."
+msgstr "ไม่มีหลักฐานว่า slug เดิมคืออะไร"
+
+#: includes/repair/class-parich-slug-repair-admin.php:847
+msgid "(out of date)"
+msgstr "(ไม่เป็นปัจจุบัน)"
+
+#: includes/repair/class-parich-slug-repair-admin.php:847
+msgid "(matches other items too)"
+msgstr "(ตรงกับรายการอื่นด้วย)"
+
+#: includes/repair/class-parich-slug-repair-admin.php:867
+msgid "Requested URLs no item accounts for"
+msgstr "URL ที่มีคนเรียกแต่ไม่ตรงกับรายการใด"
+
+#: includes/repair/class-parich-slug-repair-admin.php:868
+msgid "Addresses from 404 logs and imported lists that match no post or term, most requested first. They may belong to items whose slug was rewritten from the title."
+msgstr "ที่อยู่จากบันทึก 404 และรายการที่นำเข้าซึ่งไม่ตรงกับเรื่องหรือหมวดหมู่ใด เรียงจากที่ถูกเรียกมากที่สุด อาจเป็นของรายการที่ slug ถูกเขียนใหม่จากชื่อเรื่อง"
+
+#: includes/repair/class-parich-slug-repair-admin.php:870
+msgid "None."
+msgstr "ไม่มี"
+
+#: includes/repair/class-parich-slug-repair-admin.php:873
+msgid "Address"
+msgstr "ที่อยู่"
+
+#: includes/repair/class-parich-slug-repair-admin.php:873
+msgid "Requests"
+msgstr "จำนวนครั้งที่ถูกเรียก"
+
+#: includes/repair/class-parich-slug-repair-admin.php:873
+msgid "From"
+msgstr "มาจาก"
+
+#: includes/repair/class-parich-slug-repair-admin.php:873
+msgid "Redirect to"
+msgstr "เปลี่ยนเส้นทางไปที่"
+
+#: includes/repair/class-parich-slug-repair-admin.php:885
+msgid "ID or link of the post or page"
+msgstr "ID หรือลิงก์ของเรื่องหรือหน้าเว็บ"
+
+#: includes/repair/class-parich-slug-repair-admin.php:886
+msgid "Post ID or link"
+msgstr "ID หรือลิงก์ของเรื่อง"
+
+#: includes/repair/class-parich-slug-repair-admin.php:887
+msgid "Redirect"
+msgstr "เปลี่ยนเส้นทาง"
+
+#: includes/repair/class-parich-slug-repair-admin.php:902
+msgid "Add evidence"
+msgstr "เพิ่มหลักฐาน"
+
+#. translators: 1: imported URLs, 2: imported CSV rows
+#: includes/repair/class-parich-slug-repair-admin.php:907
+#, php-format
+msgid "Imported so far: %1$d URLs, %2$d CSV rows. They are used by every scan until removed."
+msgstr "นำเข้าแล้ว: URL %1$d รายการ แถว CSV %2$d แถว จะถูกใช้ในทุกการสแกนจนกว่าจะลบ"
+
+#: includes/repair/class-parich-slug-repair-admin.php:915
+msgid "URL list"
+msgstr "รายการ URL"
+
+#: includes/repair/class-parich-slug-repair-admin.php:915
+msgid "One address per line, for example exported from Search Console, server logs or the Wayback Machine. A CSV with the address first and a number of clicks second works too."
+msgstr "บรรทัดละหนึ่งที่อยู่ เช่น ส่งออกจาก Search Console บันทึกของเซิร์ฟเวอร์ หรือ Wayback Machine ใช้ CSV ที่มีที่อยู่ในคอลัมน์แรกและจำนวนคลิกในคอลัมน์ที่สองก็ได้"
+
+#: includes/repair/class-parich-slug-repair-admin.php:916
+msgid "Slugs you know (CSV)"
+msgstr "slug ที่คุณรู้ค่า (CSV)"
+
+#: includes/repair/class-parich-slug-repair-admin.php:916
+msgid "Lines \"type,id,slug\", for example \"post,123,ข่าว-ประจำวัน\": the type is post or term, the slug readable, encoded or a whole address."
+msgstr "แต่ละบรรทัดเป็น \"type,id,slug\" เช่น \"post,123,ข่าว-ประจำวัน\" โดย type คือ post หรือ term ส่วน slug จะเป็นแบบอ่านได้ แบบเข้ารหัส หรือที่อยู่เต็มก็ได้"
+
+#: includes/repair/class-parich-slug-repair-admin.php:928
+msgid "Import"
+msgstr "นำเข้า"
+
+#. translators: 1: largest file size, 2: most lines
+#: includes/repair/class-parich-slug-repair-admin.php:932
+#, php-format
+msgid "Up to %1$s and %2$s lines."
+msgstr "ไม่เกิน %1$s และ %2$s บรรทัด"
+
+#: includes/repair/class-parich-slug-repair-admin.php:942
+msgid "Remove imported evidence"
+msgstr "ลบหลักฐานที่นำเข้า"
+
+#: includes/repair/class-parich-slug-repair-applier.php:49
+msgid "The slug columns are still shorter than 2,000 characters: repaired slugs would be cut again. Use \"Set up again\" on the Settings tab."
+msgstr "คอลัมน์ slug ยังสั้นกว่า 2,000 ตัวอักษร slug ที่กู้คืนจะถูกตัดอีก ใช้ปุ่ม \"ตั้งค่าใหม่อีกครั้ง\" ในแท็บตั้งค่า"
+
+#: includes/repair/class-parich-slug-repair-applier.php:52
+msgid "Long URL Maker is active: its restore would write old slugs over the repaired ones. Deactivate it with the button in the notice first."
+msgstr "Long URL Maker เปิดใช้งานอยู่ การคืนค่าของมันจะเขียน slug เก่าทับที่กู้คืนแล้ว ปิดใช้งานด้วยปุ่มในประกาศก่อน"
+
+#: includes/repair/class-parich-slug-repair-applier.php:56
+msgid "The guard is missing while Long URL Maker's files are still on the site: activating it again would undo repairs. Use \"Set up again\" on the Settings tab, or delete Long URL Maker."
+msgstr "ไม่มีไฟล์ป้องกันขณะที่ไฟล์ของ Long URL Maker ยังอยู่บนเว็บ ถ้ามีคนเปิดใช้งานมันอีก การกู้คืนจะถูกย้อน ใช้ปุ่ม \"ตั้งค่าใหม่อีกครั้ง\" ในแท็บตั้งค่า หรือลบ Long URL Maker"
+
+#: includes/repair/class-parich-slug-repair-applier.php:84
+msgid "No slug was proposed: type one."
+msgstr "ไม่มีค่าที่เสนอ กรุณาพิมพ์ slug เอง"
+
+#: includes/repair/class-parich-slug-repair-applier.php:91
+msgid "Not a valid slug."
+msgstr "slug ไม่ถูกต้อง"
+
+#: includes/repair/class-parich-slug-repair-applier.php:94
+msgid "The slug would not change."
+msgstr "slug จะไม่เปลี่ยน"
+
+#: includes/repair/class-parich-slug-repair-applier.php:114
+msgid "Scan this site first."
+msgstr "สแกนเว็บนี้ก่อน"
+
+#: includes/repair/class-parich-slug-repair-applier.php:118
+msgid "Another repair is still running. Wait for it to finish."
+msgstr "การกู้คืนชุดอื่นยังทำงานอยู่ รอให้เสร็จก่อน"
+
+#: includes/repair/class-parich-slug-repair-applier.php:141
+msgid "Nothing to repair was selected."
+msgstr "ไม่ได้เลือกรายการที่จะกู้คืน"
+
+#: includes/repair/class-parich-slug-repair-applier.php:360
+msgid "It no longer exists."
+msgstr "รายการนี้ไม่มีอยู่แล้ว"
+
+#: includes/repair/class-parich-slug-repair-applier.php:363
+msgid "Already repaired (by a repair that was interrupted)."
+msgstr "กู้คืนไปแล้ว (โดยการกู้คืนที่ถูกขัดจังหวะ)"
+
+#: includes/repair/class-parich-slug-repair-applier.php:366
+#: includes/repair/class-parich-slug-repair-applier.php:378
+msgid "Its slug changed after the scan. Scan again."
+msgstr "slug ถูกเปลี่ยนหลังการสแกน กรุณาสแกนอีกครั้ง"
+
+#: includes/repair/class-parich-slug-repair-applier.php:369
+msgid "Another item uses this slug now."
+msgstr "ตอนนี้มีรายการอื่นใช้ slug นี้"
+
+#: includes/repair/class-parich-slug-repair-applier.php:448
+msgid "Its slug was changed after the repair; it was left as it is."
+msgstr "slug ถูกเปลี่ยนหลังการกู้คืน จึงคงไว้ตามเดิม"
+
+#: includes/repair/class-parich-slug-repair-scanner.php:1006
+msgid "The file could not be read."
+msgstr "อ่านไฟล์ไม่ได้"
+
+#. translators: %s: size such as 2 MB
+#: includes/repair/class-parich-slug-repair-scanner.php:1010
+#, php-format
+msgid "The file is larger than %s."
+msgstr "ไฟล์ใหญ่เกิน %s"
+
+#: includes/repair/class-parich-slug-repair-scanner.php:1017
+msgid "The file is not plain UTF-8 text."
+msgstr "ไฟล์ไม่ใช่ข้อความ UTF-8 ธรรมดา"
+
+#. translators: %s: number of lines
+#: includes/repair/class-parich-slug-repair-scanner.php:1022
+#, php-format
+msgid "The file has more than %s lines."
+msgstr "ไฟล์มีมากกว่า %s บรรทัด"
+
+#. translators: %d: number of values
+#: includes/repair/class-parich-slug-repair-system-keys.php:265
+#, php-format
+msgid "next to %d saved value"
+msgid_plural "next to %d saved values"
+msgstr[0] "อยู่ข้างค่าที่บันทึกไว้ %d ค่า"
+
+#: parich-long-slug.php:75
+msgid "Parich Long Slug does not support network activation."
+msgstr "Parich Long Slug ไม่รองรับการเปิดใช้งานทั้งเครือข่าย"
+
+#: parich-long-slug.php:76
+msgid "Plugin not activated"
+msgstr "ไม่ได้เปิดใช้งานปลั๊กอิน"

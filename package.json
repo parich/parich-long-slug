@@ -1,0 +1,24 @@
+{
+	"name": "parich-long-slug",
+	"version": "0.1.0",
+	"description": "Long, Thai-friendly slugs that survive WordPress updates, and a repair tool for slugs that Long URL Maker cut or rewrote.",
+	"license": "GPL-2.0-or-later",
+	"private": true,
+	"files": [
+		"parich-long-slug.php",
+		"uninstall.php",
+		"readme.txt",
+		"includes",
+		"assets"
+	],
+	"scripts": {
+		"test": "node tests/run-php-tests.js",
+		"test:selftest": "node tests/run-php-tests.js --selftest",
+		"lab:scan": "node tests/damage-lab/scan-lab.js",
+		"lab:apply": "node tests/damage-lab/apply-lab.js",
+		"check": "node tools/check-code.js",
+		"po": "node tools/make-po.js",
+		"plugin-zip": "node tools/build-zip.js",
+		"plugin-check": "node tools/plugin-check.js"
+	}
+}

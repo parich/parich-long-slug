@@ -1,0 +1,51 @@
+/**
+ * Settings → Long Slug, loaded on that screen only.
+ *
+ * "Support this plugin" box at the end of the Settings tab. Icons are
+ * WordPress's own Dashicons (nothing loaded from elsewhere); the heart is
+ * decorative (aria-hidden) and the button uses the admin color scheme.
+ */
+
+.parich-slug-support {
+	display: flex;
+	gap: 16px 20px;
+	align-items: flex-start;
+	max-width: 720px;
+	margin: 32px 0 8px;
+	padding: 20px 24px;
+	background: #fff;
+	border: 1px solid #c3c4c7;
+	border-inline-start: 4px solid #d63638;
+	border-radius: 4px;
+}
+
+.parich-slug-support__icon.dashicons {
+	flex: none;
+	width: 48px;
+	height: 48px;
+	font-size: 28px;
+	line-height: 48px;
+	text-align: center;
+	color: #d63638;
+	background: #fcf0f1;
+	border-radius: 50%;
+}
+
+.parich-slug-support h2 {
+	margin: 0 0 8px;
+}
+
+.parich-slug-support p {
+	margin: 0 0 12px;
+}
+
+.parich-slug-support p:last-child {
+	margin-bottom: 0;
+}
+
+@media (max-width: 600px) {
+
+	.parich-slug-support {
+		flex-direction: column;
+	}
+}

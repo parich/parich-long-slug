@@ -1,0 +1,15 @@
+# Machine-specific test settings (PHP binary, php.ini) — copy from tests/local-config.example.json
+tests/local-config.json
+
+# Damage lab output: ground truth and database dumps made on the local site
+tests/damage-lab/*.json
+tests/damage-lab/*.sql
+
+# Distributable zip
+*.zip
+
+# Phased plans made with /plan: local working notes
+docs/plans/
+
+# WordPress.org review emails and draft replies (private)
+docs/wporg-review/

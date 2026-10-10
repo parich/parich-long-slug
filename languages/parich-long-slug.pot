@@ -1,0 +1,1142 @@
+# Copyright (C) 2026 Mr.Parich Suriya
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Parich Long Slug 0.1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/parich-long-slug\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-10-10T05:39:40+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: parich-long-slug\n"
+
+#. Plugin Name of the plugin
+#: parich-long-slug.php
+#: includes/class-parich-slug-admin.php:87
+#: includes/class-parich-slug-admin.php:334
+msgid "Parich Long Slug"
+msgstr ""
+
+#. Plugin URI of the plugin
+#: parich-long-slug.php
+msgid "https://github.com/parich/parich-long-slug"
+msgstr ""
+
+#. Description of the plugin
+#: parich-long-slug.php
+msgid "Long, Thai-friendly post and term slugs that survive WordPress updates, with a repair tool for slugs damaged by Long URL Maker."
+msgstr ""
+
+#. Author of the plugin
+#: parich-long-slug.php
+msgid "Mr.Parich Suriya"
+msgstr ""
+
+#. Author URI of the plugin
+#: parich-long-slug.php
+msgid "https://github.com/parich"
+msgstr ""
+
+#: includes/class-parich-slug-admin.php:67
+msgid "The longest slug must be a number. The previous value was kept."
+msgstr ""
+
+#. translators: 1: saved value, 2: lowest allowed, 3: highest allowed
+#: includes/class-parich-slug-admin.php:77
+#, php-format
+msgid "The longest slug was set to %1$d: it must be between %2$d and %3$d."
+msgstr ""
+
+#: includes/class-parich-slug-admin.php:88
+msgid "Long Slug"
+msgstr ""
+
+#: includes/class-parich-slug-admin.php:98
+#: includes/class-parich-slug-admin.php:329
+msgid "Settings"
+msgstr ""
+
+#: includes/class-parich-slug-admin.php:109
+#: includes/class-parich-slug-admin.php:419
+msgid "Donate"
+msgstr ""
+
+#: includes/class-parich-slug-admin.php:125
+msgid "The preview could not be loaded."
+msgstr ""
+
+#. translators: 1: length in bytes, 2: longest allowed
+#: includes/class-parich-slug-admin.php:152
+#, php-format
+msgid "%1$d of %2$d bytes"
+msgstr ""
+
+#: includes/class-parich-slug-admin.php:154
+msgid "cut to fit"
+msgstr ""
+
+#: includes/class-parich-slug-admin.php:194
+msgid "Slug columns"
+msgstr ""
+
+#: includes/class-parich-slug-admin.php:197
+msgid "Long slugs are off until both columns are varchar(2000). Use \"Set up again\" below."
+msgstr ""
+
+#: includes/class-parich-slug-admin.php:205
+msgid "Character set"
+msgstr ""
+
+#: includes/class-parich-slug-admin.php:208
+msgid "Not UTF-8. Slugs still work because they are stored percent-encoded (plain ASCII), but titles in Thai may not be stored correctly elsewhere."
+msgstr ""
+
+#: includes/class-parich-slug-admin.php:215
+msgid "Missing"
+msgstr ""
+
+#: includes/class-parich-slug-admin.php:215
+msgid "Without it, a WordPress update can cut slugs longer than 200 characters (they are restored from the shadow copy afterwards). Use \"Set up again\" below."
+msgstr ""
+
+#. translators: 1: installed version, 2: bundled version
+#: includes/class-parich-slug-admin.php:218
+#, php-format
+msgid "Version %1$s (current: %2$s)"
+msgstr ""
+
+#. translators: 1: installed version, 2: bundled version
+#: includes/class-parich-slug-admin.php:218
+msgid "It is updated the next time an administrator opens wp-admin."
+msgstr ""
+
+#. translators: %s: version
+#: includes/class-parich-slug-admin.php:221
+#, php-format
+msgid "Installed, version %s"
+msgstr ""
+
+#: includes/class-parich-slug-admin.php:223
+msgid "Guard (must-use plugin)"
+msgstr ""
+
+#: includes/class-parich-slug-admin.php:232
+msgid "Shadow copy of long slugs"
+msgstr ""
+
+#. translators: %d: number of slugs
+#: includes/class-parich-slug-admin.php:234
+#, php-format
+msgid "%d slug longer than 200 characters"
+msgid_plural "%d slugs longer than 200 characters"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %d: number of slugs
+#: includes/class-parich-slug-admin.php:234
+msgid "Table missing"
+msgstr ""
+
+#: includes/class-parich-slug-admin.php:236
+msgid "Use \"Set up again\" below."
+msgstr ""
+
+#. translators: 1: date, 2: restored slugs, 3: slugs left alone
+#: includes/class-parich-slug-admin.php:243
+#, php-format
+msgid "%1$s — restored %2$d, left alone %3$d"
+msgstr ""
+
+#: includes/class-parich-slug-admin.php:248
+#: includes/class-parich-slug-admin.php:250
+msgid "Last repair after a WordPress update"
+msgstr ""
+
+#: includes/class-parich-slug-admin.php:248
+msgid "The guard was missing during that update."
+msgstr ""
+
+#: includes/class-parich-slug-admin.php:250
+msgid "Never needed"
+msgstr ""
+
+#. translators: %s: 2,048
+#: includes/class-parich-slug-admin.php:257
+#, php-format
+msgid "Links longer than %s characters"
+msgstr ""
+
+#: includes/class-parich-slug-admin.php:260
+msgid "None"
+msgstr ""
+
+#: includes/class-parich-slug-admin.php:262
+msgid "Some browsers, crawlers and sitemap readers refuse links this long. Shorten these slugs or their parent pages."
+msgstr ""
+
+#: includes/class-parich-slug-admin.php:267
+#: includes/class-parich-slug-admin.php:287
+#: includes/class-parich-slug-admin.php:289
+msgid "Long URL Maker"
+msgstr ""
+
+#: includes/class-parich-slug-admin.php:267
+msgid "Active"
+msgstr ""
+
+#: includes/class-parich-slug-admin.php:267
+msgid "Deactivate it with the button in the notice above, not the usual Deactivate link."
+msgstr ""
+
+#. translators: %d: rows
+#: includes/class-parich-slug-admin.php:272
+#, php-format
+msgid "its backup table has %d row"
+msgid_plural "its backup table has %d rows"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/class-parich-slug-admin.php:275
+msgid "its settings are still stored"
+msgstr ""
+
+#: includes/class-parich-slug-admin.php:277
+msgid "It was used on this site, so some slugs may have been cut or rewritten by it."
+msgstr ""
+
+#: includes/class-parich-slug-admin.php:285
+#: includes/repair/class-parich-slug-repair-admin.php:560
+msgid "Scan for damaged slugs"
+msgstr ""
+
+#: includes/class-parich-slug-admin.php:287
+msgid "Installed, inactive"
+msgstr ""
+
+#: includes/class-parich-slug-admin.php:287
+msgid "Removed"
+msgstr ""
+
+#: includes/class-parich-slug-admin.php:289
+msgid "Installed, never used"
+msgstr ""
+
+#: includes/class-parich-slug-admin.php:289
+msgid "Not installed"
+msgstr ""
+
+#: includes/class-parich-slug-admin.php:324
+msgid "Sorry, you are not allowed to manage Parich Long Slug."
+msgstr ""
+
+#: includes/class-parich-slug-admin.php:330
+msgid "Repair slugs"
+msgstr ""
+
+#: includes/class-parich-slug-admin.php:335
+msgid "Secondary menu"
+msgstr ""
+
+#: includes/class-parich-slug-admin.php:354
+msgid "Longest new slug"
+msgstr ""
+
+#: includes/class-parich-slug-admin.php:357
+msgid "bytes"
+msgstr ""
+
+#. translators: 1: lowest, 2: highest, 3: Thai characters at the current value
+#: includes/class-parich-slug-admin.php:362
+#, php-format
+msgid "Between %1$d and %2$d, counted after percent-encoding: a Thai character takes 9 bytes and an English letter or digit 1, so the current value fits about %3$d Thai characters. WordPress alone stops at 200. Only new and edited slugs follow this setting; existing slugs are not changed."
+msgstr ""
+
+#: includes/class-parich-slug-admin.php:372
+msgid "Try a title"
+msgstr ""
+
+#: includes/class-parich-slug-admin.php:385
+msgid "Status"
+msgstr ""
+
+#: includes/class-parich-slug-admin.php:408
+msgid "Set up again"
+msgstr ""
+
+#: includes/class-parich-slug-admin.php:409
+msgid "Widens the slug columns, installs the guard and creates the shadow table if any of them is missing. Safe to repeat."
+msgstr ""
+
+#: includes/class-parich-slug-admin.php:417
+msgid "Support this plugin"
+msgstr ""
+
+#: includes/class-parich-slug-admin.php:418
+msgid "Parich Long Slug is free, with every feature for everyone. If it is useful to you, you can support its development:"
+msgstr ""
+
+#: includes/class-parich-slug-admin.php:420
+msgid "Secure payment by Stripe."
+msgstr ""
+
+#: includes/class-parich-slug-guard.php:73
+msgid "WordPress cannot write files directly on this server."
+msgstr ""
+
+#: includes/class-parich-slug-guard.php:77
+msgid "The guard template is missing."
+msgstr ""
+
+#: includes/class-parich-slug-guard.php:80
+msgid "The folder could not be created."
+msgstr ""
+
+#: includes/class-parich-slug-guard.php:84
+#: includes/class-parich-slug-guard.php:88
+msgid "The file could not be written."
+msgstr ""
+
+#: includes/class-parich-slug-guard.php:105
+msgid "The file could not be deleted."
+msgstr ""
+
+#. translators: 1: reason, 2: file path
+#: includes/class-parich-slug-guard.php:131
+#, php-format
+msgid "The guard file could not be installed at %2$s: %1$s Without it, a WordPress update can shorten slugs longer than 200 characters."
+msgstr ""
+
+#: includes/class-parich-slug-legacy.php:164
+msgid "Sorry, you are not allowed to deactivate this plugin."
+msgstr ""
+
+#: includes/class-parich-slug-legacy.php:197
+msgid "Long URL Maker was deactivated without running its deactivation routine. Your slugs were not changed."
+msgstr ""
+
+#: includes/class-parich-slug-legacy.php:202
+msgid "Long URL Maker was switched off again right after activation, before its activation routine could write old slugs over the current ones. Keep it inactive while Parich Long Slug is active."
+msgstr ""
+
+#: includes/class-parich-slug-legacy.php:213
+msgid "Long URL Maker is active."
+msgstr ""
+
+#: includes/class-parich-slug-legacy.php:214
+msgid "When it is deactivated it rebuilds every slug from the post title and shortens the slug columns, which changes your URLs. Parich Long Slug has switched those actions off while both plugins are active. Turn Long URL Maker off with this button:"
+msgstr ""
+
+#: includes/class-parich-slug-legacy.php:219
+msgid "Deactivate Long URL Maker safely"
+msgstr ""
+
+#: includes/class-parich-slug-schema.php:326
+msgid "Parich Long Slug could not finish its setup."
+msgstr ""
+
+#: includes/class-parich-slug-schema.php:332
+msgid "Try again"
+msgstr ""
+
+#: includes/class-parich-slug-schema.php:353
+msgid "A WordPress database update shortened the slug columns."
+msgstr ""
+
+#. translators: %d: number of slugs
+#: includes/class-parich-slug-schema.php:357
+#, php-format
+msgid "Parich Long Slug widened them again and restored %d slug that had been cut to 200 characters."
+msgid_plural "Parich Long Slug widened them again and restored %d slugs that had been cut to 200 characters."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: number of slugs, 2: list such as "post:12, term:5"
+#: includes/class-parich-slug-schema.php:364
+#, php-format
+msgid "%1$d slug was left as it is because it changed after being cut: %2$s."
+msgid_plural "%1$d slugs were left as they are because they changed after being cut: %2$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/class-parich-slug-schema.php:377
+msgid "Dismiss"
+msgstr ""
+
+#: includes/class-parich-slug-schema.php:391
+msgid "Sorry, you are not allowed to dismiss this notice."
+msgstr ""
+
+#: includes/class-parich-slug-schema.php:409
+msgid "Sorry, you are not allowed to change the database for this plugin."
+msgstr ""
+
+#. translators: %d: number of redirects
+#: includes/repair/class-parich-slug-repair-admin.php:64
+#, php-format
+msgid "Parich Long Slug redirects %d old address to a repaired post or term. Redirects stop when the plugin is deactivated, and are deleted with it."
+msgid_plural "Parich Long Slug redirects %d old addresses to repaired posts and terms. Redirects stop when the plugin is deactivated, and are deleted with it."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:68
+msgid "Download them first to keep them in another redirect plugin."
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:89
+msgid "Starting the scan…"
+msgstr ""
+
+#. translators: 1: step name, 2: objects checked so far
+#: includes/repair/class-parich-slug-repair-admin.php:91
+#, php-format
+msgid "Scanning: %1$s — %2$d posts and terms checked"
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:92
+msgid "Scan finished. Loading the results…"
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:93
+msgid "The scan stopped with an error. Try again; the scan restarts from the beginning."
+msgstr ""
+
+#. translators: 1: items done, 2: items in all
+#: includes/repair/class-parich-slug-repair-admin.php:98
+#, php-format
+msgid "Repairing: %1$d of %2$d…"
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:99
+msgid "Change the slugs of the selected items? A redirect is made from every old address. You can undo the whole batch later."
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:100
+msgid "Change the slugs of every item marked \"Ready\"? A redirect is made from every old address. You can undo the whole batch later."
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:101
+msgid "Select at least one item."
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:102
+msgid "The repair stopped:"
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:134
+msgid "Another repair was started meanwhile."
+msgstr ""
+
+#. translators: 1: batch number, 2: items repaired, 3: items skipped, 4: redirects made
+#: includes/repair/class-parich-slug-repair-admin.php:159
+#, php-format
+msgid "Repair %1$d: %2$d slugs repaired, %3$d skipped, %4$d redirects made."
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:160
+msgid "Clear any page cache and let your SEO or sitemap plugin rebuild its sitemap."
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:163
+msgid "Yoast SEO: run \"Optimize SEO data\" (Yoast SEO → Tools) so it reads the repaired addresses."
+msgstr ""
+
+#. translators: %d: number of links
+#: includes/repair/class-parich-slug-repair-admin.php:168
+#, php-format
+msgid "%d link on your site still points at an old address; the redirects cover it, but you may want to update it."
+msgid_plural "%d links on your site still point at old addresses; the redirects cover them, but you may want to update them."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:185
+msgid "That repair does not exist."
+msgstr ""
+
+#. translators: 1: batch number, 2: slugs put back, 3: slugs left (changed since), 4: items still to undo
+#: includes/repair/class-parich-slug-repair-admin.php:198
+#, php-format
+msgid "Undo of repair %1$d: %2$d slugs put back, %3$d left as they were changed since, %4$d still to undo."
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:202
+msgid "Click Undo again to go on."
+msgstr ""
+
+#. translators: 1: old address, 2: post title
+#: includes/repair/class-parich-slug-repair-admin.php:250
+#, php-format
+msgid "%1$s now redirects to \"%2$s\"."
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:269
+msgid "Give the ID or the link of a published post or page."
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:273
+msgid "That address cannot be redirected."
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:276
+msgid "That address already redirects somewhere else. Turn that redirect off first."
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:285
+msgid "collecting URLs from logs, redirects and links"
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:286
+msgid "checking posts"
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:287
+msgid "checking categories and tags"
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:288
+msgid "looking for shared slugs"
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:289
+msgid "weighing the evidence"
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:290
+msgid "settling slugs wanted twice"
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:291
+msgid "checking proposals against existing slugs"
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:292
+msgid "ordering parents before children"
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:293
+msgid "done"
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:313
+msgid "Another scan was started meanwhile."
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:334
+msgid "Sorry, you are not allowed to use the repair tool."
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:355
+msgid "Only .txt and .csv files can be imported."
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:357
+msgid "No file was uploaded."
+msgstr ""
+
+#. translators: 1: lines imported, 2: lines skipped
+#: includes/repair/class-parich-slug-repair-admin.php:368
+#, php-format
+msgid "Imported %1$d lines, skipped %2$d. Scan again to use them."
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:381
+msgid "Imported URLs and CSV rows were removed."
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:395
+msgid "There are no scan results to export yet."
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:432
+msgid "Long URL Maker backup"
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:433
+msgid "Slug before trashing"
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:434
+msgid "SEO plugin data"
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:435
+msgid "404 log"
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:436
+msgid "Existing redirect"
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:437
+msgid "Link on the site"
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:438
+msgid "Made from the title"
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:439
+msgid "Imported CSV"
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:440
+msgid "Imported URL"
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:441
+msgid "GUID"
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:442
+msgid "ACF: saved values"
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:443
+msgid "ACF: options page"
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:444
+msgid "ACF: acf-json file"
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:445
+msgid "Theme it belongs to"
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:446
+msgid "Template with this title"
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:454
+msgid "Cut at 200 characters"
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:455
+msgid "Rewritten from the title"
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:456
+msgid "Put back to an older slug"
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:457
+msgid "Same slug as another item"
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:458
+msgid "Cut to fit \"-2\" when made"
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:459
+msgid "System key (ACF field, template, styles…)"
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:460
+msgid "Category or tag"
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:467
+msgid "Long URL Maker put back an older slug: both were in use, so choose one."
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:468
+msgid "Another item keeps the same slug."
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:469
+msgid "Cut when it was made: this URL never changed. Lengthening it is optional."
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:470
+msgid "Strong sources disagree."
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:471
+msgid "A strong source says the current slug is right."
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:472
+msgid "Only one source that can be wrong."
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:473
+msgid "Drafts get their slug when published."
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:474
+msgid "The slug was changed after Long URL Maker's backup was made."
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:475
+msgid "Only the backup says so, and WordPress keeps no history of page slugs."
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:476
+msgid "Another item would get the same slug."
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:477
+msgid "Another item already uses this slug."
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:478
+msgid "WordPress or a plugin finds this item by this key: check that it is the right one."
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:479
+msgid "Several global styles belong to this theme: they are numbered in the order they were made."
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:480
+msgid "A cache WordPress rebuilds by itself: nothing to repair."
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:488
+msgid "Ready"
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:489
+msgid "Check"
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:490
+msgid "Unknown"
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:503
+msgid "Slug columns hold 2,000 characters"
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:505
+#: includes/repair/class-parich-slug-repair-admin.php:515
+msgid "Use \"Set up again\" on the Settings tab."
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:508
+msgid "Long URL Maker is not active"
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:510
+msgid "Deactivate it with the button in the notice at the top of the page."
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:513
+msgid "The guard is installed"
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:538
+msgid "Finds slugs that Long URL Maker cut, rewrote from the title or put back to an older value, and proposes the original slug with the evidence for it. Scanning only reads your site; nothing is changed."
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:540
+msgid "Before repairing"
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:545
+msgid "Done:"
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:545
+msgid "Not yet:"
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:554
+msgid "Back up the database before applying any repair."
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:558
+msgid "Scan"
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:560
+msgid "Scan again"
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:565
+msgid "A scan did not finish. Start it again to see results."
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:582
+msgid "Repairs made"
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:584
+#: includes/repair/class-parich-slug-repair-admin.php:623
+msgid "Repair"
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:584
+msgid "When"
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:584
+msgid "By"
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:584
+msgid "Slugs"
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:584
+#: includes/repair/class-parich-slug-repair-admin.php:633
+msgid "Actions"
+msgstr ""
+
+#. translators: 1: repaired, 2: undone, 3: left as they were changed since
+#: includes/repair/class-parich-slug-repair-admin.php:595
+#, php-format
+msgid "%1$d repaired, %2$d undone, %3$d kept"
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:604
+msgid "Undo"
+msgstr ""
+
+#. translators: %d: batch number
+#: includes/repair/class-parich-slug-repair-admin.php:604
+#, php-format
+msgid "Undo repair %d"
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:623
+msgid "Matched by hand"
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:625
+msgid "Redirects"
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:626
+msgid "Old addresses that now lead to the repaired post or term (301). They work only while Parich Long Slug is active: before removing it, download them and add them to a redirect plugin."
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:630
+msgid "Download the redirects (CSV)"
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:633
+msgid "Old address"
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:633
+msgid "Goes to"
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:633
+msgid "Made by"
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:633
+msgid "Used"
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:638
+msgid "(off)"
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:639
+msgid "Not published any more: the old address shows \"not found\"."
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:649
+msgid "Turn off"
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:649
+msgid "Turn on"
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:649
+msgid "Delete"
+msgstr ""
+
+#. translators: 1: date and time, 2: posts and terms checked, 3: items listed
+#: includes/repair/class-parich-slug-repair-admin.php:677
+#, php-format
+msgid "Last scan %1$s: %2$d posts and terms checked, %3$d need a look."
+msgstr ""
+
+#. translators: %s: table name
+#: includes/repair/class-parich-slug-repair-admin.php:685
+#, php-format
+msgid "The table %s does not have the columns this version knows; it was skipped."
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:688
+msgid "All"
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:711
+msgid "Kind of damage"
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:713
+msgid "All kinds of damage"
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:718
+msgid "Filter"
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:727
+msgid "Repair the selected items"
+msgstr ""
+
+#. translators: %d: number of items marked Ready
+#: includes/repair/class-parich-slug-repair-admin.php:731
+#, php-format
+msgid "Repair the %d item marked \"Ready\""
+msgid_plural "Repair all %d items marked \"Ready\""
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:739
+msgid "A repair did not finish (the page was closed or the server stopped it). You can start it again after five minutes; items it already repaired are skipped, and it can be undone below."
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:757
+msgid "Download the results (CSV)"
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:771
+msgid "Select"
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:772
+msgid "Item"
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:773
+msgid "Now"
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:774
+msgid "Proposed"
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:775
+msgid "Evidence"
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:780
+msgid "Nothing in this list."
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:791
+msgid "Repair this item"
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:794
+msgid "(no title)"
+msgstr ""
+
+#. translators: %d: number of other links
+#: includes/repair/class-parich-slug-repair-admin.php:811
+#, php-format
+msgid "%d more link changes with it (children, posts in it)."
+msgid_plural "%d more links change with it (children, posts in it)."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:816
+msgid "(empty)"
+msgstr ""
+
+#. translators: %d: bytes
+#: includes/repair/class-parich-slug-repair-admin.php:816
+#: includes/repair/class-parich-slug-repair-admin.php:819
+#, php-format
+msgid "%d bytes"
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:822
+msgid "Or type a slug:"
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:828
+msgid "No evidence of what the slug was."
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:847
+msgid "(out of date)"
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:847
+msgid "(matches other items too)"
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:867
+msgid "Requested URLs no item accounts for"
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:868
+msgid "Addresses from 404 logs and imported lists that match no post or term, most requested first. They may belong to items whose slug was rewritten from the title."
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:870
+msgid "None."
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:873
+msgid "Address"
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:873
+msgid "Requests"
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:873
+msgid "From"
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:873
+msgid "Redirect to"
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:885
+msgid "ID or link of the post or page"
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:886
+msgid "Post ID or link"
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:887
+msgid "Redirect"
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:902
+msgid "Add evidence"
+msgstr ""
+
+#. translators: 1: imported URLs, 2: imported CSV rows
+#: includes/repair/class-parich-slug-repair-admin.php:907
+#, php-format
+msgid "Imported so far: %1$d URLs, %2$d CSV rows. They are used by every scan until removed."
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:915
+msgid "URL list"
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:915
+msgid "One address per line, for example exported from Search Console, server logs or the Wayback Machine. A CSV with the address first and a number of clicks second works too."
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:916
+msgid "Slugs you know (CSV)"
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:916
+msgid "Lines \"type,id,slug\", for example \"post,123,ข่าว-ประจำวัน\": the type is post or term, the slug readable, encoded or a whole address."
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:928
+msgid "Import"
+msgstr ""
+
+#. translators: 1: largest file size, 2: most lines
+#: includes/repair/class-parich-slug-repair-admin.php:932
+#, php-format
+msgid "Up to %1$s and %2$s lines."
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-admin.php:942
+msgid "Remove imported evidence"
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-applier.php:49
+msgid "The slug columns are still shorter than 2,000 characters: repaired slugs would be cut again. Use \"Set up again\" on the Settings tab."
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-applier.php:52
+msgid "Long URL Maker is active: its restore would write old slugs over the repaired ones. Deactivate it with the button in the notice first."
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-applier.php:56
+msgid "The guard is missing while Long URL Maker's files are still on the site: activating it again would undo repairs. Use \"Set up again\" on the Settings tab, or delete Long URL Maker."
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-applier.php:84
+msgid "No slug was proposed: type one."
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-applier.php:91
+msgid "Not a valid slug."
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-applier.php:94
+msgid "The slug would not change."
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-applier.php:114
+msgid "Scan this site first."
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-applier.php:118
+msgid "Another repair is still running. Wait for it to finish."
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-applier.php:141
+msgid "Nothing to repair was selected."
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-applier.php:360
+msgid "It no longer exists."
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-applier.php:363
+msgid "Already repaired (by a repair that was interrupted)."
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-applier.php:366
+#: includes/repair/class-parich-slug-repair-applier.php:378
+msgid "Its slug changed after the scan. Scan again."
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-applier.php:369
+msgid "Another item uses this slug now."
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-applier.php:448
+msgid "Its slug was changed after the repair; it was left as it is."
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-scanner.php:1006
+msgid "The file could not be read."
+msgstr ""
+
+#. translators: %s: size such as 2 MB
+#: includes/repair/class-parich-slug-repair-scanner.php:1010
+#, php-format
+msgid "The file is larger than %s."
+msgstr ""
+
+#: includes/repair/class-parich-slug-repair-scanner.php:1017
+msgid "The file is not plain UTF-8 text."
+msgstr ""
+
+#. translators: %s: number of lines
+#: includes/repair/class-parich-slug-repair-scanner.php:1022
+#, php-format
+msgid "The file has more than %s lines."
+msgstr ""
+
+#. translators: %d: number of values
+#: includes/repair/class-parich-slug-repair-system-keys.php:265
+#, php-format
+msgid "next to %d saved value"
+msgid_plural "next to %d saved values"
+msgstr[0] ""
+msgstr[1] ""
+
+#: parich-long-slug.php:75
+msgid "Parich Long Slug does not support network activation."
+msgstr ""
+
+#: parich-long-slug.php:76
+msgid "Plugin not activated"
+msgstr ""

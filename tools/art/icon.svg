@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="Parich Long Slug">
+	<rect width="256" height="256" rx="56" fill="#1e3a8a"/>
+	<rect x="26" y="74" width="204" height="64" rx="32" fill="#fff"/>
+	<path d="M58 121 L72 91" stroke="#1e3a8a" stroke-width="9" stroke-linecap="round"/>
+	<rect x="86" y="100" width="60" height="12" rx="6" fill="#1e3a8a"/>
+	<rect x="154" y="100" width="48" height="12" rx="6" fill="#1e3a8a"/>
+	<g fill="none" stroke="#facc15" stroke-width="9" stroke-linecap="round" stroke-linejoin="round">
+		<path d="M44 182 H212"/>
+		<path d="M62 166 L44 182 L62 198"/>
+		<path d="M194 166 L212 182 L194 198"/>
+	</g>
+</svg>
