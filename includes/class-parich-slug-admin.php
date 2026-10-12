@@ -111,6 +111,19 @@ class Parich_Slug_Admin
 		return $links;
 	}
 
+	/**
+	 * Whether the plugin's notices may appear on the current screen: only the Dashboard,
+	 * the Plugins screen and its own settings page (plus $more), never across the whole
+	 * admin.
+	 *
+	 * @param string[] $more Other screen IDs for a notice, such as 'update-core'.
+	 */
+	public static function is_notice_screen(array $more = array())
+	{
+		$screen = function_exists('get_current_screen') ? get_current_screen() : null;
+		return $screen && in_array($screen->id, array_merge(array('dashboard', 'plugins', 'settings_page_' . self::PAGE), $more), true);
+	}
+
 	public static function enqueue($hook_suffix)
 	{
 		if ('settings_page_' . self::PAGE !== $hook_suffix) {

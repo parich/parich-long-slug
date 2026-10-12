@@ -88,11 +88,34 @@ function pls_test_ajax(callable $handler, array $post)
 }
 
 /**
- * Output of Parich_Slug_Legacy::admin_notices() for the current user.
+ * Makes $id the current admin screen (get_current_screen()), or none with null.
  */
-function pls_legacy_notices()
+function pls_test_screen($id)
 {
+	if (!class_exists('WP_Screen')) {
+		require_once ABSPATH . 'wp-admin/includes/class-wp-screen.php';
+		require_once ABSPATH . 'wp-admin/includes/screen.php';
+	}
+	$GLOBALS['current_screen'] = null === $id ? null : WP_Screen::get($id);
+}
+
+/**
+ * Output of a notice callback for the current user on admin screen $screen.
+ */
+function pls_test_notices($callback, $screen = 'plugins')
+{
+	pls_test_screen($screen);
 	ob_start();
-	Parich_Slug_Legacy::admin_notices();
-	return (string) ob_get_clean();
+	call_user_func($callback);
+	$html = (string) ob_get_clean();
+	pls_test_screen(null);
+	return $html;
+}
+
+/**
+ * Output of Parich_Slug_Legacy::admin_notices() for the current user (Plugins screen by default).
+ */
+function pls_legacy_notices($screen = 'plugins')
+{
+	return pls_test_notices(array('Parich_Slug_Legacy', 'admin_notices'), $screen);
 }

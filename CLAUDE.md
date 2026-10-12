@@ -17,6 +17,7 @@ Phased plans (made with `/plan`) live in `docs/plans/`, which is gitignored: loc
 - SQL: values only through `$wpdb->prepare()`, table and column names only through `%i` (`tools/check-code.php` checks this — L7). Plugin Check (0 warnings) also needs every format written in place: a literal, plus `' . implode(',', array_fill(0, count($ids), '%d')) . '` for IN lists. A format put together in a variable (`.=`, a ternary, reassigned, a helper's return value) is reported even when it holds only literals — use one fixed query per case, or `(%s = '' OR …)` for an optional filter (see `Parich_Slug_Repair_Scanner::load_items()`)
 - Never `GROUP BY`/`DISTINCT` a long slug column directly: MySQL 8.4 failed to group equal long values of a prefix-indexed varchar — group by `MD5(col)` or a stored hash
 - Never `load_plugin_textdomain()`, no `Domain Path`, no translation files in the zip (WordPress.org language packs)
+- Admin notices (guideline 11, raised by the first WordPress.org pre-review): administrators only, only on the Dashboard, the Plugins screen and the plugin's page (`Parich_Slug_Admin::is_notice_screen()`), only while the situation lasts, no promotion; information about this plugin on the Plugins screen goes under its own row (`after_plugin_row_*`), not into a notice. Tests set the screen with `pls_test_screen()` / `pls_test_notices()`
 - Strings are English; Thai lives in `languages/parich-long-slug-th.po`, built from `tools/th-strings.js`
 
 ## Commands

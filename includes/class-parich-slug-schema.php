@@ -306,14 +306,20 @@ class Parich_Slug_Schema
 		wp_cache_delete(self::LOCK_OPTION, 'options');
 	}
 
+	/**
+	 * For administrators, on the Dashboard, the Plugins screen and the plugin's page only
+	 * (the heal notice on the Updates screen too).
+	 */
 	public static function admin_notices()
 	{
 		if (!current_user_can('activate_plugins')) {
 			return;
 		}
-		self::heal_notice();
+		if (Parich_Slug_Admin::is_notice_screen(array('update-core'))) {
+			self::heal_notice();
+		}
 		$error = (string) get_option(self::ERROR_OPTION, '');
-		if ('' === $error) {
+		if ('' === $error || !Parich_Slug_Admin::is_notice_screen()) {
 			return;
 		}
 		?>

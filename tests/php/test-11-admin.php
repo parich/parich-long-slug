@@ -164,8 +164,7 @@ update_option(Parich_Slug_Schema::LAST_HEAL_OPTION, array('time' => time(), 'res
 update_option(Parich_Slug_Schema::HEAL_NOTICE_OPTION, 1, false);
 ob_start();
 Parich_Slug_Admin::render_page();
-Parich_Slug_Schema::admin_notices();
-$html = (string) ob_get_clean();
+$html = (string) ob_get_clean() . pls_test_notices(array('Parich_Slug_Schema', 'admin_notices'), 'dashboard');
 pls_test_assert('values from the database are escaped on the page and in notices', false === strpos($html, '<script>alert(1)</script>') && false !== strpos($html, '&lt;script&gt;'));
 
 pls_test_section('Donate');
@@ -183,6 +182,37 @@ Parich_Slug_Admin::enqueue('index.php');
 $elsewhere = wp_style_is('parich-slug-admin-settings', 'enqueued');
 Parich_Slug_Admin::enqueue('settings_page_' . Parich_Slug_Admin::PAGE);
 pls_test_assert('its style loads on this plugin\'s page only, with Dashicons', !$elsewhere && wp_style_is('parich-slug-admin-settings', 'enqueued') && in_array('dashicons', wp_styles()->registered['parich-slug-admin-settings']->deps, true) && is_file(PLS_TEST_PLUGIN_DIR . '/assets/admin-settings.css'));
+
+pls_test_section('Notices stay in their place (guideline 11)');
+$row = function () {
+	ob_start();
+	do_action('after_plugin_row_' . PLS_TEST_PLUGIN_BASENAME, PLS_TEST_PLUGIN_BASENAME, array(), 'active');
+	return (string) ob_get_clean();
+};
+update_option(Parich_Slug_Redirects::COUNT_OPTION, 3, true);
+$html = $row();
+pls_test_assert('redirects exist → a line under this plugin\'s own row offers to download them first', false !== strpos($html, 'class="plugin-update-tr active"') && false !== strpos($html, '3 old addresses') && false !== strpos($html, 'Download them first') && false !== strpos($html, 'tab=repair'), $html);
+wp_set_current_user(pls_test_user('subscriber'));
+pls_test_assert('…not for a user who cannot manage plugins', '' === $row());
+wp_set_current_user($admin);
+update_option(Parich_Slug_Redirects::COUNT_OPTION, 0, true);
+pls_test_assert('…and nothing when there are no redirects', '' === $row());
+// Every notice of the plugin switched on at once (the Long URL Maker one needs it active: test-02).
+update_option(Parich_Slug_Redirects::COUNT_OPTION, 3, true);
+update_option(Parich_Slug_Schema::ERROR_OPTION, 'Simulated setup error.', false);
+update_option(Parich_Slug_Schema::LAST_HEAL_OPTION, array('time' => time(), 'restored' => 2, 'skipped' => array()), false);
+update_option(Parich_Slug_Schema::HEAL_NOTICE_OPTION, 1, false);
+$all = function ($screen) {
+	return pls_test_notices(function () {
+		do_action('admin_notices');
+	}, $screen);
+};
+$ours = function ($html) {
+	return false !== strpos($html, 'Parich Long Slug') || false !== strpos($html, 'Long URL Maker');
+};
+pls_test_assert('with all of them due: none in the post list, the editor, Media, Users or Settings → General', !$ours($all('edit-post') . $all('post') . $all('upload') . $all('users') . $all('options-general')));
+pls_test_assert('negative control: the same notices do show on the Dashboard', $ours($all('dashboard')));
+pls_test_assert('the redirect reminder is no longer an admin notice, even on the Plugins screen', false === strpos($all('plugins'), 'Download them first'));
 
 pls_test_rollback();
 pls_test_done();

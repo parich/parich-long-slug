@@ -115,14 +115,14 @@ pls_test_assert('running it again adds no rows', $count === (int) $wpdb->get_var
 pls_test_section('Heal notice');
 update_option(Parich_Slug_Schema::LAST_HEAL_OPTION, array('time' => time(), 'restored' => 3, 'skipped' => array('post:12', 'term:5'), 'error' => ''), false);
 update_option(Parich_Slug_Schema::HEAL_NOTICE_OPTION, 1, false);
-$notices = function () {
-	ob_start();
-	Parich_Slug_Schema::admin_notices();
-	return (string) ob_get_clean();
+$notices = function ($screen = 'dashboard') {
+	return pls_test_notices(array('Parich_Slug_Schema', 'admin_notices'), $screen);
 };
 $html = $notices();
 pls_test_assert('administrator sees what was restored and what was left', false !== strpos($html, 'restored 3 slugs') && false !== strpos($html, '2 slugs were left as they are') && false !== strpos($html, 'post:12, term:5'));
 pls_test_assert('…with a Dismiss button that posts a nonce', false !== strpos($html, 'value="' . Parich_Slug_Schema::DISMISS_HEAL_ACTION . '"') && false !== strpos($html, 'name="_wpnonce"'));
+pls_test_assert('…also on the Updates screen, the Plugins screen and the plugin\'s page', false !== strpos($notices('update-core'), 'restored 3 slugs') && false !== strpos($notices('plugins'), 'restored 3 slugs') && false !== strpos($notices('settings_page_parich-long-slug'), 'restored 3 slugs'));
+pls_test_assert('…but not across the admin: nothing in the post list or the editor (guideline 11)', '' === $notices('edit-post') . $notices('post'));
 $admin = get_current_user_id();
 wp_set_current_user(pls_test_user('subscriber'));
 pls_test_assert('subscriber sees nothing', '' === $notices());

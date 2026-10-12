@@ -21,11 +21,9 @@ if (is_wp_error($real) || $real['length'] < Parich_Slug_Schema::LENGTH) {
 	pls_test_done();
 }
 
-function pls_schema_notices()
+function pls_schema_notices($screen = 'plugins')
 {
-	ob_start();
-	Parich_Slug_Schema::admin_notices();
-	return (string) ob_get_clean();
+	return pls_test_notices(array('Parich_Slug_Schema', 'admin_notices'), $screen);
 }
 
 /**
@@ -163,6 +161,8 @@ wp_set_current_user($admin);
 $html = pls_schema_notices();
 pls_test_assert('administrator sees the error with a "Try again" button', false !== strpos($html, 'could not finish its setup') && false !== strpos($html, 'Simulated setup error.') && false !== strpos($html, 'Try again'));
 pls_test_assert('the button posts its action with a nonce', false !== strpos($html, 'value="' . Parich_Slug_Schema::FIX_ACTION . '"') && false !== strpos($html, 'name="_wpnonce"'));
+pls_test_assert('…also on the Dashboard and the plugin\'s page', false !== strpos(pls_schema_notices('dashboard'), 'Simulated setup error.') && false !== strpos(pls_schema_notices('settings_page_parich-long-slug'), 'Simulated setup error.'));
+pls_test_assert('…but not across the admin: nothing in the post list, the editor or Settings → General (guideline 11)', '' === pls_schema_notices('edit-post') . pls_schema_notices('post') . pls_schema_notices('options-general'));
 wp_set_current_user($subscriber);
 pls_test_assert('subscriber sees nothing', '' === pls_schema_notices());
 

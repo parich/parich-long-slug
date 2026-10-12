@@ -75,6 +75,13 @@ pls_test_assert(
 	'the button posts to admin-post.php with its action and a nonce',
 	false !== strpos($html, 'admin-post.php') && false !== strpos($html, 'value="' . Parich_Slug_Legacy::DEACTIVATE_ACTION . '"') && false !== strpos($html, 'name="_wpnonce"')
 );
+foreach (array('dashboard', 'settings_page_parich-long-slug') as $screen_id) {
+	pls_test_assert("…also on {$screen_id}", false !== strpos(pls_legacy_notices($screen_id), 'Long URL Maker is active.'));
+}
+foreach (array('edit-post', 'post', 'upload', 'options-general', 'users') as $screen_id) {
+	pls_test_assert("…but not across the admin: nothing on {$screen_id} (guideline 11)", '' === pls_legacy_notices($screen_id));
+}
+pls_test_assert('…nor without a screen', '' === pls_legacy_notices(null));
 wp_set_current_user($subscriber);
 pls_test_assert('subscriber sees nothing', '' === pls_legacy_notices());
 

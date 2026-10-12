@@ -203,8 +203,10 @@ class Parich_Slug_Legacy
 			);
 		}
 
+		// While both are active: on the Dashboard, the Plugins screen and the plugin's page
+		// only (its hooks are already switched off, so nothing is urgent elsewhere).
 		$basename = self::active_basename();
-		if (!$basename || !current_user_can('deactivate_plugin', $basename)) {
+		if (!$basename || !current_user_can('deactivate_plugin', $basename) || !Parich_Slug_Admin::is_notice_screen()) {
 			return;
 		}
 		?>

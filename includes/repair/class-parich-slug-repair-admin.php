@@ -42,23 +42,25 @@ class Parich_Slug_Repair_Admin
 		add_action('admin_post_' . self::EXPORT_REDIRECTS_ACTION, array(__CLASS__, 'handle_export_redirects'));
 		add_action('admin_post_' . self::MAP_ACTION, array(__CLASS__, 'handle_map'));
 		add_action('admin_enqueue_scripts', array(__CLASS__, 'enqueue'));
-		add_action('admin_notices', array(__CLASS__, 'plugins_notice'));
+		add_action('after_plugin_row_' . plugin_basename(PARICH_SLUG_FILE), array(__CLASS__, 'plugin_row_redirects'));
 		add_filter('parich_slug_repair_url', array(__CLASS__, 'url'));
 	}
 
 	/**
-	 * On the Plugins screen only, while repair redirects exist: they stop when the
-	 * plugin is deactivated and are deleted with it, so offer to download them.
+	 * Under this plugin's own row on the Plugins screen (where core shows update messages),
+	 * while repair redirects exist: they stop when the plugin is deactivated and are
+	 * deleted with it, so offer to download them. Not an admin notice.
 	 */
-	public static function plugins_notice()
+	public static function plugin_row_redirects()
 	{
-		$screen = function_exists('get_current_screen') ? get_current_screen() : null;
 		$count = (int) get_option(Parich_Slug_Redirects::COUNT_OPTION);
-		if (!$screen || 'plugins' !== $screen->id || !$count || !current_user_can('activate_plugins')) {
+		if (!$count || !current_user_can('activate_plugins')) {
 			return;
 		}
+		$table = isset($GLOBALS['wp_list_table']) && $GLOBALS['wp_list_table'] instanceof WP_List_Table ? $GLOBALS['wp_list_table'] : null;
 		printf(
-			'<div class="notice notice-info"><p>%s <a href="%s">%s</a></p></div>',
+			'<tr class="plugin-update-tr active"><td colspan="%d" class="plugin-update colspanchange"><div class="notice inline notice-info notice-alt"><p>%s <a href="%s">%s</a></p></div></td></tr>',
+			$table ? (int) $table->get_column_count() : 3,
 			esc_html(sprintf(
 				/* translators: %d: number of redirects */
 				_n('Parich Long Slug redirects %d old address to a repaired post or term. Redirects stop when the plugin is deactivated, and are deleted with it.', 'Parich Long Slug redirects %d old addresses to repaired posts and terms. Redirects stop when the plugin is deactivated, and are deleted with it.', $count, 'parich-long-slug'),
